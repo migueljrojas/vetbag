@@ -86,6 +86,7 @@ block content
             .container
                 .row
                     .col-24
+                        h2.home__top-sales__title Más vendidos
                         +slider('home__top-sales__slider', 'multi')
                             each item,index in site.data.product
                                 .home__top-sales__slide
@@ -95,6 +96,7 @@ block content
             .container
                 .row
                     .col-24
+                        h2.home__seleccion__title Nuestra selección
                         .home__seleccion__wrapper
                             +product('', "Alimento para perros", '', '', "imageLeft", "perros", "/images/pack-pedigree.png")
                             +product('', "Alimento para gatos", '', '', "imageLeft", "gatos", "/images/pack-gatos.png")
@@ -104,18 +106,19 @@ block content
         section.home__politicas
             .container
                 .row
-                    .col-16
+                    .col-24.col-sm-12.offset-sm-2
                         h3.home__politicas__title Políticas de envío
                         .home__politicas__wrapper
                             p.home__politicas__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                             p.home__politicas__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                    .col-8   
-                        img(src="/images/illustration-package.svg")
+                    .col-24.col-sm-8  
+                        .home__politicas__image
+                            img(src="/images/illustration-package.svg")
             
         section.home__contact   
             .container  
                 .row
-                    .col-14.offset-5
+                    .col-24.col-sm-14.offset-sm-5
                         h2.home__contact__title ¿Tienes preguntas?
                         form.home__contact__form
                             input.home__contact__input(type="text" placeholder="Nombre")

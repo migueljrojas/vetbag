@@ -39,6 +39,11 @@
 
     &__social {
         display: flex;
+        margin-bottom: 20px;
+
+        @include mq(sm) {
+            margin-bottom: 0;
+        }
 
         li {
             &:not(:last-child) {

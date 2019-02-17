@@ -2,13 +2,16 @@
     &__label {
         display: block;
         background: $purple;
-        padding: 10px 15px;
-        min-width: 70px;
         color: $white;
         border-radius: 5px;
         opacity: 0.3;
         cursor: pointer;
         margin: 0 3px 10px 3px;
+        padding: 10px 15px;
+        min-width: 70px;
+
+        @include mq(sm) {
+        }
     }
 
     &__input {

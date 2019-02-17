@@ -8,7 +8,11 @@
         &__slider {
             margin-bottom: 0 !important;
             .slick-dots {
-                bottom: 5%;
+                bottom: 1%;
+
+                @include mq(sm) {
+                    bottom: 5%;
+                }
 
                 li {
                     button {
@@ -22,8 +26,13 @@
 
         &__slide {
             position: relative;
-            height: 70vh;
-            padding: 150px 3vw 80px 3vw;
+            padding: 50px 20px;
+
+            @include mq(sm) {
+                height: 70vh;
+                padding: 150px 3vw 80px 3vw;
+
+            }
 
         }
 
@@ -47,13 +56,21 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                margin-bottom: 60px;
+            }
         }
 
         &__text {
             margin: 0;
-            font-size: 50px;
             font-weight: 700;
+            font-size: 32px;
+
+            @include mq(sm) {
+                font-size: 50px;
+            }
 
             &--orange {
                 width: 100%;
@@ -74,6 +91,11 @@
 
             &--white {
                 color: $white;
+                margin-bottom: 20px;
+
+                @include mq(sm) {
+                    margin-bottom: 0;
+                }
 
                 &--small {
                     font-size: 16px;
@@ -94,7 +116,12 @@
         }
 
         &__brand {
-            width: 40%;
+            width: 100%;
+            height: 15vh;
+
+            @include mq(sm) {
+                width: 40%;
+            }
 
             img {
                 width: 100%;
@@ -106,8 +133,13 @@
             color: $white;
             font-size: 24px;
             font-weight: 700;
-            margin-bottom: 1.5vw;
             margin-top: 0;
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                margin-bottom: 1.5vw;
+
+            }
         }
 
         &__group-link {
@@ -123,9 +155,15 @@
 
         &__container {
             position: relative;
-            height: 48%;
             overflow: hidden;
             background: $white;
+            height: 50vh;
+            margin-top: 20px;
+
+            @include mq(sm) {
+                height: 48%;
+                margin-top: 0;
+            }
 
             &:first-child {
                 margin-bottom: 7%;
@@ -139,7 +177,11 @@
         &__dog-image {
             position: absolute;
             bottom: 0;
-            height: 60%;
+            height: 50%;
+
+            @include mq(sm) {
+                height: 60%;
+            }
 
             img {
                 height: 100%;
@@ -154,7 +196,7 @@
             transform: translateX(-50%);
             width: 30%;
             height: 30%;
-            z-index: 2;
+            z-index: 3;
 
             img {
                 height: auto;
@@ -181,7 +223,11 @@
                 z-index: 2;
                 top: 50%;
                 transform: translateY(-50%);
-                height: 70%;
+                height: 60%;
+
+                @include mq(sm) {
+                    height: 70%;
+                }
             }
         }
 
@@ -223,8 +269,12 @@
             right: 5%;
             top: 50%;
             transform: translateY(-50%);
-            width: 40%;
             overflow: hidden;
+            width: 35%;
+
+            @include mq(sm) {
+                width: 40%;
+            }
 
             img {
                 height: auto;
@@ -267,6 +317,20 @@
     &__top-sales {
         margin-bottom: 40px;
 
+        &__title {
+            font-weight: 700;
+            color: $purple;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 32px;
+
+            @include mq(sm) {
+                font-size: 40px;
+                text-align: left;
+            }
+        }
+
         &__slider {
             .slick-slide {
                 padding: 0 10px;
@@ -297,6 +361,20 @@
     &__seleccion {
         margin-bottom: 40px;
 
+        &__title {
+            font-weight: 700;
+            color: $orange;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 32px;
+
+            @include mq(sm) {
+                font-size: 40px;
+                text-align: left;
+            }
+        }
+
         &__wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -314,22 +392,35 @@
             color: $white;
             font-weight: 700;
             font-size: 40px;
-            text-align: right;
             margin: 0;
+            text-align: center;
+
+            @include mq(sm) {
+                text-align: right;
+            }
         }
 
         &__wrapper {
-             width: 70%;
              display: flex;
              flex-direction: column;
              justify-content: flex-start;
              align-items: center;
              padding: 40px 20px 40px 0;
+
+             @include mq(sm) {
+                 width: 80%;
+             }
         }
 
         &__text {
             color: $white;
             font-weight: 700;
+        }
+
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -339,6 +430,7 @@
             font-size: 40px;
             text-align: center;
             font-weight: 700;
+            margin-top: 0;
         }
 
         &__form {
