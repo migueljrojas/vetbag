@@ -1,4 +1,126 @@
 extends _layouts/base
 
+include ./_modules/slider/slider
+include ./_modules/product/product
+include ./_modules/button/button
+
 block content
     main.home
+        section.home__hero
+            .container
+                .row
+                    .col-xs-24.col-sm-16
+                        +slider('home__hero__slider', 'alt')
+                            .home__hero__slide
+                                .home__hero__slide-background
+                                    img(src="/images/iso-perro-yellow.png")
+                                .home__hero__wrapper
+                                    p.home__hero__text.home__hero__text--orange 10% de descuento
+                                    p.home__hero__text.home__hero__text--white en productos
+                                    .home__hero__brand
+                                        img(src="/images/logo-pro-plan.png")
+                                .home__hero__group
+                                    p.home__hero__group-text Código Promocional
+                                    a.home__hero__group-link vetpro10
+                            .home__hero__slide
+                                .home__hero__slide-background
+                                    img(src="/images/iso-perro-yellow.png")
+                                .home__hero__wrapper
+                                    p.home__hero__text.home__hero__text--orange 10% de descuento
+                                    p.home__hero__text.home__hero__text--white en productos
+                                    .home__hero__brand
+                                        img(src="/images/logo-royal-canin.png")
+                                .home__hero__group
+                                    p.home__hero__group-text Código Promocional
+                                    a.home__hero__group-link vetpro12
+                                        
+                    .col-xs-24.col-sm-8
+                        .home__hero__container
+                            .home__hero__dog-image
+                                img(src="/images/perro-alfombra.png")
+                            .home__hero__stamp
+                                img(src="/images/pack-gatos.png")
+                            .home__hero__purple-box
+                            .home__hero__purple-dog-watermark
+                                img(src="/images/iso-perro-purple.png")
+                            .home__hero__content
+                                .home__hero__content-wrapper
+                                    p.home__hero__text.home__hero__text--orange.home__hero__text--orange--small Cama térmica
+                                    p.home__hero__text.home__hero__text--white.home__hero__text--white--small para perro/gato
+                                p.home__hero__text.home__hero__text--white.home__hero__text--white--small $2.200
+                                
+                        .home__hero__container.home__hero__container--bottom
+                            .home__hero__yellow-container
+                                p.home__hero__text.home__hero__text--orange.home__hero__text--orange--alternative Oferta
+                                p.home__hero__text.home__hero__text--orange.home__hero__text--orange--alternative del mes
+                            .home__hero__content.home__hero__content--bottom
+                                p.home__hero__text.home__hero__text--white.home__hero__text--white--medium Royal Canin Mini
+                                p.home__hero__text.home__hero__text--white.home__hero__text--white--medium Adulto - 1 Kg
+                                strike.home__hero__text.home__hero__text--white.home__hero__text--white--medium $236,00
+                                p.home__hero__text.home__hero__text--white.home__hero__text--white--large $196,67
+                            .home__hero__food-image
+                                img(src="/images/pack-royal-canin.png")
+        
+        section.home__brands
+            .container
+                .row
+                    .col-24
+                        +slider('home__brands__slider', 'fourSlides')
+                            .home__brands__slide
+                                .home__brands__image
+                                    img(src="/images/logo-pedigree.png")
+                            .home__brands__slide
+                                .home__brands__image
+                                    img(src="/images/logo-royal-canin.png")
+                            .home__brands__slide
+                                .home__brands__image
+                                    img(src="/images/logo-eukanuba.png")
+                            .home__brands__slide
+                                .home__brands__image
+                                    img(src="/images/logo-pro-plan-slider.png")
+                            .home__brands__slide
+                                .home__brands__image
+                                    img(src="/images/logo-dogui.png")
+
+        section.home__top-sales
+            .container
+                .row
+                    .col-24
+                        +slider('home__top-sales__slider', 'multi')
+                            each item,index in site.data.product
+                                .home__top-sales__slide
+                                    +product(item.price, item.description, item.button, "producto-" + index, "imageTop", '', "/images/pack-pedigree.png")
+
+        section.home__seleccion
+            .container
+                .row
+                    .col-24
+                        .home__seleccion__wrapper
+                            +product('', "Alimento para perros", '', '', "imageLeft", "perros", "/images/pack-pedigree.png")
+                            +product('', "Alimento para gatos", '', '', "imageLeft", "gatos", "/images/pack-gatos.png")
+                            +product('', "Collares para perros", '', '', "imageLeft", "perros", "/images/collar-perros.png")
+                            +product('', "Casas para roedores", '', '', "imageLeft", "roedores", "/images/casa-roedores.png")
+
+        section.home__politicas
+            .container
+                .row
+                    .col-16
+                        h3.home__politicas__title Políticas de envío
+                        .home__politicas__wrapper
+                            p.home__politicas__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                            p.home__politicas__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                    .col-8   
+                        img(src="/images/illustration-package.svg")
+            
+        section.home__contact   
+            .container  
+                .row
+                    .col-14.offset-5
+                        h2.home__contact__title ¿Tienes preguntas?
+                        form.home__contact__form
+                            input.home__contact__input(type="text" placeholder="Nombre")
+                            input.home__contact__input(type="email" placeholder="Email")
+                            input.home__contact__input(type="number" placeholder="Telefono")
+                            textarea.home__contact__input.home__contact__input--textarea(placeholder="Mensaje")
+                            .home__contact__button
+                                +button('link', 'Enviar', '#', '')

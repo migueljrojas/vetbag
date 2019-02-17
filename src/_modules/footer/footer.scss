@@ -1,3 +1,62 @@
 .footer {
-    
+    background: $orange;
+
+    &__logo {
+        padding: 20px 0;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        &--hidden {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                color: transparent;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__list {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+
+    &__social {
+        display: flex;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+
+        a {
+            font-size: 32px;
+        }
+    }
+
+    &__border {
+        border-bottom: 2px solid $white;
+    }
+
+    &__copyright {
+        margin: 20px 0;
+        color: $white;
+    }
 }

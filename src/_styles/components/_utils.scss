@@ -59,3 +59,8 @@
 [data-parallax]{
     position: relative;
 }
+
+.border {
+    border: 2px solid $lightGray;
+    border-radius: 5px;
+}

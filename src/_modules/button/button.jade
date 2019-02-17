@@ -1,0 +1,8 @@
+mixin button(mode, description, href, id, name)
+    .button
+        if mode === 'radio'
+            input.button__input(type="radio" id=name name=id)
+            label.button__label(for=name)=description
+            
+        if mode === 'link'
+            a.button__link(href=href)=description

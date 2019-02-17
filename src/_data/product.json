@@ -1,0 +1,139 @@
+[
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"10 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"3 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"10 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"15 kg."
+
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"10 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    },
+    {
+        "price":"$1.129",
+        "description":"Pedigree Adulto Carne Pollo y Cereales",
+        "button": [
+            {
+                "mode":"radio",
+                "description":"3 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"10 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"15 kg."
+            },
+            {
+                "mode":"radio",
+                "description":"21 kg."
+            }
+        ]
+    }
+]
