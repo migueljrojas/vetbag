@@ -1,0 +1,29 @@
+extends ../_layouts/base
+
+include ../_modules/product/product
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.products
+        section.products__filters
+            .container
+                .row
+                    .col-24.col-sm-6
+                        filtros
+                    .col-24.col-sm-18
+                        .row
+                            .col-24.col-sm-16
+                                Perros
+                            .col-24.col-sm-8
+                                button
+                        .row
+                            - var n = 1;
+                            while n < 5
+                                - n++
+                                each item,index in site.data.product
+                                    .col-24.col-sm-8
+                                        +product(item.price, item.description, item.button, "producto-" + (index + 1)*(n + 3), "/images/pack-pedigree.png")

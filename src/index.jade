@@ -90,18 +90,27 @@ block content
                         +slider('home__top-sales__slider', 'multi')
                             each item,index in site.data.product
                                 .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + index, "imageTop", '', "/images/pack-pedigree.png")
+                                    +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
+                            each item,index in site.data.product
+                                .home__top-sales__slide
+                                    +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
+                            each item,index in site.data.product
+                                .home__top-sales__slide
+                                    +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
 
         section.home__seleccion
             .container
                 .row
                     .col-24
                         h2.home__seleccion__title Nuestra selección
+
+                        - var categoryButton = {"text":"Ver más", "link":"/categoria-productos"}
+
                         .home__seleccion__wrapper
-                            +product('', "Alimento para perros", '', '', "imageLeft", "perros", "/images/pack-pedigree.png")
-                            +product('', "Alimento para gatos", '', '', "imageLeft", "gatos", "/images/pack-gatos.png")
-                            +product('', "Collares para perros", '', '', "imageLeft", "perros", "/images/collar-perros.png")
-                            +product('', "Casas para roedores", '', '', "imageLeft", "roedores", "/images/casa-roedores.png")
+                            +category("perros", "Alimento para perros", "/images/pack-pedigree.png", categoryButton)
+                            +category("gatos", "Alimento para gatos", "/images/pack-gatos.png", categoryButton)
+                            +category("perros", "Collares para perros", "/images/collar-perros.png", categoryButton)
+                            +category("roedores", "Casas para roedores", "/images/casa-roedores.png", categoryButton)
 
         section.home__politicas
             .container

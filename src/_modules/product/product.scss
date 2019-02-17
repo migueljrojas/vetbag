@@ -9,6 +9,7 @@
 
     @include mq(sm) {
         min-height: 62vh;
+        margin-bottom: 20px;
     }
 
     &--left {

@@ -1,24 +1,24 @@
-mixin product(price, description, button, productId, type, title, imageSrc)
-    if type === 'imageTop'
-        form.product.product--image-top
-            .product__image
-                img(src=imageSrc)
-            .product__content
-                span.product__price=price
-                p.product__description=description
-            .product__size
+mixin product(price, description, button, productId, imageSrc)
+    form.product.product--image-top
+        .product__image
+            img(src=imageSrc)
+        .product__content
+            span.product__price=price
+            p.product__description=description
+        .product__size
+            if button
                 each element,index in button
                     +button(element.mode, element.description, '', productId, productId + "-" + index)
-            .product__button
-                +button('link', 'Agregar al carrito', '#')
+        .product__button
+            +button('link', 'Agregar al carrito', '#')
 
-    if type === 'imageLeft'
-        .product.product--left
-            .product__image.product__image--left
-                img(src=imageSrc)
-            .product__wrapper
-                .product__content
-                    p.product__title=title
-                    p.product__description.product__description--image-left=description
-                .product__button.product__button--image-left
-                    +button('link', 'Ver más', '#')
+mixin category(title, description, imageSrc, button)
+    .product.product--left
+        .product__image.product__image--left
+            img(src=imageSrc)
+        .product__wrapper
+            .product__content
+                p.product__title=title
+                p.product__description.product__description--image-left=description
+            .product__button.product__button--image-left
+                +button('link', button.text, button.link)
