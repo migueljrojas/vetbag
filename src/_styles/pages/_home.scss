@@ -36,9 +36,9 @@
             position: relative;
             height: 0;
             padding-bottom: 80%;
-            border-radius: 5px;     
+            border-radius: 5px;
             background: $yellow;
-            
+
             @include mq(sm) {
                 padding-bottom: 66.4%;
             }
@@ -51,8 +51,8 @@
             top: 15px;
             bottom: 10px;
             overflow: hidden;
-            width: 100%;            
-            
+            width: 100%;
+
             img {
                 position: absolute;
                 top:0;
@@ -204,9 +204,9 @@
             left: 0;
             z-index: 2;
             font-size: 18px;
-            color: $white;  
-            padding-right: 0;    
-            
+            color: $white;
+            padding-right: 0;
+
             @include mq(sm) {
                 padding: 20px;
                 font-size: 21px;
@@ -215,13 +215,13 @@
             &--right {
                 left: 50%;
                 padding-left: 0;
-                padding-right: 20px; 
+                padding-right: 20px;
             }
 
             ._desc {
                 font-weight: 900;
                 line-height: 24px;
-                margin: 0 0 12px;           
+                margin: 0 0 12px;
 
                 span {
                     color: $orange;
@@ -286,43 +286,7 @@
         margin-bottom: 40px;
 
         &__title {
-            font-weight: 900;
-            color: $purple;
-            margin-top: 0;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 32px;
-
-            @include mq(sm) {
-                font-size: 40px;
-                text-align: left;
-            }
-        }
-
-        &__slider {
-            .slick-slide {
-                padding: 0 10px;
-            }
-
-            .slick-list {
-                margin: 0 -10px;
-                //
-                // @include mq(sm) {
-                // }
-            }
-
-            .slick-prev {
-                left: -30px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-            .slick-next {
-                right: -30px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
+            @include sectionTitle;
         }
     }
 

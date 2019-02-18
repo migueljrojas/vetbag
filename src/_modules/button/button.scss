@@ -24,10 +24,11 @@
     &__link,
     &__submit {
         @include trans;
-        
+
         display: inline-block;
         color: $white;
         background: $orange;
+        display: inline-block;
         padding: 0 25px;
         border-radius: 5px;
         text-decoration: none;
@@ -44,7 +45,7 @@
 
         &:hover {
             background: darken($orange, 10%);
-            color: $white; 
+            color: $white;
         }
 
         @include mq(sm) {
@@ -75,5 +76,7 @@
         border-radius: 5px;
         outline: none;
         color: $darkGray;
+        background: $white;
+        height: 50px;
     }
 }

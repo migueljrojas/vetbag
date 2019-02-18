@@ -3,6 +3,7 @@ extends ../_layouts/base
 include ../_modules/slider/slider
 include ../_modules/product/product
 include ../_modules/button/button
+include ../_modules/product-slider/product-slider
 
 block config
   //- Correct base url pathing for this page
@@ -133,3 +134,10 @@ block content
                                 .descripcion-producto__descripcion__group
                                     p.descripcion-producto__descripcion__text Clasificación
                                     p.descripcion-producto__descripcion__text.descripcion-producto__descripcion__text--orange Premium
+
+        section.descripcion-producto__related
+            .container
+                .row
+                    .col-24
+                        h2.descripcion-producto__related__title También te puede interesar
+                        +product-slider

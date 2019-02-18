@@ -1,0 +1,154 @@
+extends ../_layouts/base
+
+include ../_modules/button/button
+include ../_modules/product-slider/product-slider
+include ../_modules/slider/slider
+include ../_modules/button/button
+include ../_modules/product/product
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.checkout
+        section.checkout__login
+            .container
+                .row
+                    .col-24
+                        .row
+                            .col-24
+                                h2.checkout__carrito__title Carrito
+                        .row
+                            .col-24.col-sm-18.offset-sm-3
+                                form.row.vb-form
+                                    .col-24.col-sm-12
+                                        .vb-form__group
+                                            input.vb-form__input(type="text" placeholder="Email*")
+                                            label.vb-form__label Email*
+                                    .col-24.col-sm-12
+                                        .vb-form__group
+                                            input.vb-form__input(type="text" placeholder="Contraseña*")
+                                            label.vb-form__label Contraseña*
+                                            a.checkout__login__pass-recovery(href="#") Olvidé mi contraseña
+                                .row
+                                    .col-24
+                                        .checkout__login__container
+                                            .checkout__login__button
+                                                +button('link', 'Ingresar', '#', '', '', '')
+                                            .checkout__login__button
+                                                +button('link', 'Soy nuevo', '#', '', '', 'ghost')
+            
+        section.checkout__payment-details
+            .container
+                .row
+                    .col-24
+                        h3.checkout__payment-details__title Medios de envio
+                        .checkout__payment-details__container
+                            .checkout__payment-details__wrapper
+                                .checkout__payment-details__group
+                                    input.checkout__payment-details__input(type="radio" id="radio1" name="radio" checked)
+                                    label.checkout__payment-details__label(for="radio1") Estándar
+                                    p.checkout__payment-details__text Al seleccionar esta opción de despacho, las entregas son según disponibilidad y efectuadas de Lunes a Sábado.
+                            .checkout__payment-details__wrapper
+                                input.checkout__payment-details__input(type="radio" id="radio2" name="radio")
+                                label.checkout__payment-details__label(for="radio2") Envío día siguiente
+                .row
+                    .col-24
+                        h3.checkout__payment-details__title Método de pago
+                        .checkout__payment-details__container
+                            a.checkout__payment-details__payment-type Tarjeta de crédito
+
+        section.checkout__carrito
+            .container
+                .row
+                    .col-24
+                        .row
+                            .col-24.col-sm-18
+                                .checkout__carrito__container
+                                    .checkout__carrito__container-group
+                                        .checkout__carrito__group-wrapper
+                                            h3.checkout__carrito__subtitle Producto
+                                    .checkout__carrito__container-group
+                                        .checkout__carrito__group-wrapper
+                                            h3.checkout__carrito__subtitle Cantidad
+                                        .checkout__carrito__group-wrapper
+                                            h3.checkout__carrito__subtitle Precio
+                .row
+                    .col-24.col-sm-18
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                    .col-24.col-sm-6
+                        .checkout__carrito__payment-container
+                            .checkout__carrito__payment-wrapper
+                                p.checkout__carrito__payment-text Subtotal
+                                span.checkout__carrito__payment-number $1.129
+                            .checkout__carrito__payment-wrapper
+                                p.checkout__carrito__payment-text Envío
+                                +button('link', 'Calcular', '#', '', '', 'ghost')
+                        .checkout__carrito__payment-container.checkout__carrito__payment-container--orange
+                            p.checkout__carrito__payment-text.checkout__carrito__payment-text--white Total
+                            span.checkout__carrito__payment-number.checkout__carrito__payment-number--white $1.129
+                        .checkout__carrito__payment-button
+                            +button('link', 'Finalizar compra', '#')
+                        .checkout__carrito__payment-button.checkout__carrito__payment-button--hollow
+                            +button('link', 'Seguir comprando', '#', '', '', 'ghost')
+        

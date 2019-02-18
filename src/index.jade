@@ -4,6 +4,7 @@ include ./_modules/slider/slider
 include ./_modules/product/product
 include ./_modules/button/button
 include ./_modules/category-module/category-module
+include ./_modules/product-slider/product-slider
 
 block content
     main.home
@@ -12,7 +13,6 @@ block content
                 .row
                     .col-24.col-md-16
                         +slider('home__hero__slider', 'alt')
-
                             .home__hero__slide
                                 .home__hero__slide-background
                                     img(src="/images/iso-perro-yellow.png")
@@ -88,20 +88,8 @@ block content
                 .row
                     .col-24
                         h2.home__top-sales__title Más vendidos
-                        +slider('home__top-sales__slider', 'multi')
-                            each item,index in site.data.product
-                                .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
-                            each item,index in site.data.product
-                                .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + (index + 1) * 3, "/images/pack-pedigree.png")
-                            each item,index in site.data.product
-                                .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + (index + 2) * 5, "/images/pack-pedigree.png")
-                            each item,index in site.data.product
-                                .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + (index + 3) * 7, "/images/pack-pedigree.png")
-                           
+                        +product-slider
+                        
         +category-module
 
         section.home__politicas
