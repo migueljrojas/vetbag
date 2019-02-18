@@ -1,0 +1,50 @@
+extends ../_layouts/base
+
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.user.user--login
+        .user--login__hero
+            .user--login__image
+                img(src="/images/user.png")
+        .container
+            form.row.vb-form.nopadding
+                .col-24.col-sm-12
+                    .user--login__container.user--login__container--right
+                        .user--login__wrapper
+                            h2.user--login__title Regístrate
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Email*")
+                                label.vb-form__label Email*
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Contraseña*")
+                                label.vb-form__label Contraseña*
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Repite tu contraseña*")
+                                label.vb-form__label Repite tu contraseña*
+                            .user--login__group
+                                input.user--login__input(type="checkbox" id="checkbox")
+                                label.user--login__label(for="checkbox") Quiero recibir cupones y ofertas exclusivas
+                            a.user--login__link(href="#") Política de protección de datosy política de privacidad
+                            .vb-form__group
+                                input.user--login__input(type="checkbox" id="checkbox")
+                                label.user--login__label(for="checkbox") Aceptar Términos y Condiciones
+                            .vb-form__group.vb-form__group--center
+                                +button('submit', 'Registrarme')
+                .col-24.col-sm-12
+                    .user--login__container
+                        .user--login__wrapper
+                            h2.user--login__title Inicia Sesión
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Email*")
+                                label.vb-form__label Email*
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Contraseña*")
+                                label.vb-form__label Contraseña*
+                            a.user--login__link(href="#") He olvidado mi contraseña
+                            .vb-form__group.vb-form__group--center
+                                +button('submit', 'Iniciar sesión')

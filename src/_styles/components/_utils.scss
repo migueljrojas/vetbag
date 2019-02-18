@@ -64,3 +64,10 @@
     border: 1px solid $lightGray;
     border-radius: 5px;
 }
+
+._divider {
+    height: 1px;
+    width: 100%;
+    background: $lightGray;
+    margin: 20px 0;
+}
