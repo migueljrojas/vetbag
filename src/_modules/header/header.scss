@@ -6,7 +6,7 @@
     top:0;
     left:0;
     right:0;
-    border-bottom: 2px solid $lightGray;
+    border-bottom: 3px solid $lightGray;
     background: $white;
 
     &__wrapper {
@@ -15,7 +15,7 @@
         justify-content: space-between;
 
         &--top {
-            padding: 10px 0; 
+            padding: 10px 0;
 
             @include mq(sm) {
                 padding: 30px 0 20px;
@@ -48,7 +48,7 @@
         left: 0;
         width: 100%;
         transform: translateX(-100%);
-        
+
         @include mq(sm) {
             width: 45%;
             display: block;
@@ -80,7 +80,7 @@
             width: 100%;
             position: relative;
         }
-    
+
         &__input {
             border: none;
             height: 32px;
@@ -88,12 +88,12 @@
             border-bottom: 2px solid $lightGray;
             width: 100%;
             padding: 0 42px 0 10px;
-            
+
             &:focus {
                 outline: none;
                 box-shadow: none;
             }
-            
+
             @include mq(sm) {
                 border-radius: 5px;
                 border: 2px solid $lightGray;
@@ -101,7 +101,7 @@
                 padding: 0 65px 0 15px;
             }
         }
-    
+
         &__button {
             background: transparent;
             border: none;
@@ -115,12 +115,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             &:focus {
                 box-shadow: none;
                 outline: none;
             }
-    
+
             i {
                 color: $purple;
             }
@@ -178,7 +178,7 @@
             @include mq(sm) {
                 margin-right: 10px;
             }
-            
+
             @include mq(lg) {
                 margin-right: 10px;
                 width: 36px;
@@ -225,7 +225,7 @@
         position: relative;
         height: 100%;
         padding: 0 10px;
-        
+
         &__button {
             display: flex;
             align-items: center;
@@ -251,7 +251,7 @@
 
         &__dropdown {
             @include trans;
-    
+
             position: absolute;
             max-height: 0;
             overflow: hidden;
@@ -268,7 +268,7 @@
             @include mq(sm) {
                 top: 110%;
             }
-    
+
             &:after {
                 content: '';
                 width: 10px;
@@ -284,11 +284,11 @@
                 @include mq(sm) {
                     right: 10px;
                 }
-            }    
+            }
         }
 
         &__dropdown-item {
-            
+
             &:not(:last-child) {
                 margin-bottom: 10px;
             }
@@ -303,13 +303,13 @@
             &__icon {
                 margin-right: 10px;
             }
-        
+
             &__name {
                 font-size: 14px;
                 white-space: nowrap;
             }
         }
-    
+
 
         &.-active {
             .header__login__dropdown {
@@ -367,7 +367,7 @@
         }
 
         &__list {
-            
+
             @include mq(md) {
                 display: flex;
             }
@@ -375,8 +375,8 @@
 
         &__item {
             position: relative;
-            border-bottom: 1px solid $lightGray;
-            
+            // border-bottom: 1px solid $lightGray;
+
             @include mq(md) {
                 height: 100%;
                 display: flex;
@@ -388,8 +388,8 @@
                     color: $orange;
 
                     &:after {
-                        display:none;
                         content: '';
+                        display:none;
                         height: 3px;
                         border: none;
                         width: 100%;
@@ -424,7 +424,7 @@
             cursor: pointer;
             background: transparent;
             border: none;
-            outline: none;                
+            outline: none;
             letter-spacing: 1px;
             display: block;
             padding: 10px 15px;
@@ -449,18 +449,18 @@
                 color: $orange;
             }
 
-            
+
         }
 
         &__sublist {
             @include trans;
 
             opacity: 0;
-            pointer-events: none;            
+            pointer-events: none;
             z-index: 5;
             overflow: hidden;
             max-height: 0;
-            
+
             @include mq(md) {
                 background: $white;
                 display:block;

@@ -1,0 +1,27 @@
+.product-slider {
+    &__slider {
+        .slick-slide {
+            padding: 0 10px;
+        }
+
+        .slick-list {
+            margin: 0 -10px;
+            //
+            // @include mq(sm) {
+            // }
+        }
+
+        .slick-prev {
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .slick-next {
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    }
+}

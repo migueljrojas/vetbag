@@ -1,0 +1,14 @@
+mixin product-slider(spec)
+    +slider('product-slider__slider', 'multi')
+        each item,index in site.data.product
+            .product-slider__slide
+                +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
+        each item,index in site.data.product
+            .product-slider__slide
+                +product(item.price, item.description, item.button, "producto-" + (index + 1) * 3, "/images/pack-pedigree.png")
+        each item,index in site.data.product
+            .product-slider__slide
+                +product(item.price, item.description, item.button, "producto-" + (index + 2) * 5, "/images/pack-pedigree.png")
+        each item,index in site.data.product
+            .product-slider__slide
+                +product(item.price, item.description, item.button, "producto-" + (index + 3) * 7, "/images/pack-pedigree.png")

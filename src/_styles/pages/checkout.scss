@@ -1,0 +1,345 @@
+.checkout {
+    background: $lightestGray;
+
+    &__carrito {
+        padding: 40px 0;
+
+        &__title {
+            @include sectionTitle;
+
+            border-bottom: 2px solid $lightGray;
+            padding-bottom: 20px;
+        }
+
+        &__container {
+            display: flex;
+        }
+
+        &__container-group {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__subtitle {
+            color: $orange;
+            margin-top: 0;
+            margin-bottom: 10px;
+            display: none;
+
+            @include mq(sm) {
+                display: flex;
+            }
+        }
+
+        &__product {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: $white;
+            border: 2px solid $lightGray;
+            padding: 2vh 0;
+            margin-bottom: 20px;
+            flex-direction: column;
+
+            @include mq(sm) {
+                flex-direction: row;
+            }
+        }
+
+        &__group {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                width: 50%;
+                flex-wrap: nowrap;
+                margin-bottom: 0;
+            }
+        }
+
+        &__group-wrapper {
+            width: 33.34%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 10vh;
+
+            @include mq(sm) {
+                justify-content: center;
+                height: auto;
+            }
+
+            &--align {
+                justify-content: center;
+            }
+
+            &--size {
+                display: block;
+                height: auto;
+
+                @include mq(sm) {
+                    display: flex;
+                }
+            }
+        }
+
+        &__label {
+            color: $orange;
+            margin-bottom: 10px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            @include mq(sm) {
+                display: none;
+            }
+        }
+
+        &__image {
+            overflow: hidden;
+            position: relative;
+            height: 20vh;
+            width: 40%;
+
+            img {
+                position: absolute;
+                height: 100%;
+                width: auto;
+                left: 50%;
+                top: 50%;
+                transform: translate3d(-50%, -50%, 0);
+            }
+
+            @include mq(sm) {
+                height: 10vh;
+            }
+        }
+
+        &__product-description {
+            width: 60%;
+            margin: 0;
+            font-size: 18px;
+            color: $darkGray;
+            font-weight: 600;
+            padding-right: 30px;
+        }
+
+        &__link {
+            cursor: pointer;
+
+            i{
+                font-size: 28px;
+                color: $orange;
+            }
+        }
+
+        &__input {
+            width: 50%;
+            background: $white;
+            border: 2px solid $lightGray;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        &__price {
+            color: $purple;
+            font-size: 24px;
+        }
+
+        &__payment-container {
+            border-top: 2px solid $lightGray;
+            border-left: 2px solid $lightGray;
+            border-right: 2px solid $lightGray;
+            background: $white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 10px;
+
+            &--orange {
+                background: $orange;
+                border-bottom: 2px solid $orange;
+                border-left: 2px solid $orange;
+                border-right: 2px solid $orange;
+                border-top: 2px solid transparent;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__payment-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__payment-text,
+        &__payment-number {
+            color: $darkGray;
+
+            &--white {
+                color: $white;
+                font-size: 20px;
+                margin: 0;
+
+                @include mq(sm) {
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        &__payment-button {
+            margin-bottom: 20px;
+
+            .button {
+                &__link {
+                    width: 100%;
+                }
+            }
+
+            &--hollow {
+                .button {
+                    &__link {
+                        &--hollow {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__payment-details {
+        margin-bottom: 40px;
+
+        &__title {
+            color: $orange;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        &__container {
+            background: $white;
+            border-radius: 5px;
+            border: 2px solid $lightGray;
+            display: flex;
+            flex-direction: column;
+
+            @include mq(sm) {
+                flex-direction: row;
+            }
+        }
+
+        &__wrapper {
+            padding: 20px;
+
+            @include mq(sm) {
+                width: 50%;
+            }
+
+            &:first-child {
+                border-bottom: 2px solid $lightGray;
+
+                @include mq(sm) {
+                    border-right: 2px solid $lightGray;
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        input[type="radio"] {
+            &:checked + label {
+                color: $orange;
+                font-weight: 900;
+
+                &:after {
+                    border: 2px solid $lightGray;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%) scale(0.5,0.5);
+                    height: 15px;
+                    width: 15px;
+                    background: $orange;
+                    border-radius: 50%;
+                }
+
+            }
+
+            &:checked + label + .checkout__payment-details__text {
+                opacity: 1;
+                height: auto;
+                overflow: visible;
+                margin: 10px 0;
+            }
+        }
+
+        &__label {
+            padding-left: 20px;
+            position: relative;
+            cursor: pointer;
+
+            &:before {
+                @include trans;
+            }
+
+            &:after {
+                @include trans;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 15px;
+                width: 15px;
+                border: 1px solid $lightGray;
+                border-radius: 50%;
+            }
+        }
+
+        &__text {
+            @include trans;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            padding-left: 20px;
+            margin: 0;
+
+            @include mq(sm) {
+                width: 60%;
+            }
+        }
+
+        &__payment-type {
+            margin-left: 20px;
+            padding: 20px 0;
+            font-weight: 600;
+        }
+    }
+
+    &__related {
+        padding-bottom: 40px;
+
+        &__title {
+            @include sectionTitle;
+        }
+    }
+}

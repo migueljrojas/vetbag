@@ -151,6 +151,10 @@
                 &__link {
                     border: 2px solid $orange;
                 }
+                
+                &__select {
+                    background: $white;
+                }
             }
 
             &--transparent {
@@ -261,6 +265,14 @@
             &--orange {
                 color: $orange;
             }
+        }
+    }
+
+    &__related {
+        padding-bottom: 40px;
+
+        &__title {
+            @include sectionTitle;
         }
     }
 }

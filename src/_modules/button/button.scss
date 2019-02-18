@@ -22,9 +22,9 @@
     }
 
     &__link {
-        display: inline-block;
         color: $white;
         background: $orange;
+        display: inline-block;
         padding: 0 25px;
         border-radius: 5px;
         text-decoration: none;
@@ -37,9 +37,36 @@
         text-align: center;
         min-width: 120px;
 
+        &--hollow {
+            background: $white;
+            border: 2px solid $orange;
+            color: $orange;
+            display: inline-block;
+            padding: 0 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 600;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            min-width: 120px;
+
+            @include mq(sm) {
+                min-width: 170px;
+            }
+
+            @include mq(lg) {
+                height: 60px;
+                line-height: 60px;
+            }
+        }
+
         &:hover {
             background: darken($orange, 10%);
-            color: $white; 
+            color: $white;
         }
 
         @include mq(sm) {
