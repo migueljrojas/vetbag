@@ -5,19 +5,23 @@ var Header = function() {
     var header = $('.header');
     var body = $('body');
     var menuOpen = $('.header__hamburguer');
-    var dropdownButton = $('.header__dropdown-button');
-    var dropdown = $('.header__dropdown');
-
+    var headerLoginButton = $('.header__login__button');
+    var headerLogin = $('.header__login');
+    var headerSearchToggle = $('.header__search-toggle');
+    var headerSearch = $('.header__search');
+    
     menuOpen.on('click', function(){
         header.toggleClass('-open');
         body.toggleClass('-hideOverflow');
     });
 
-    dropdownButton.on('click', function(){
-        dropdownButton.toggleClass('-active')
-        dropdown.toggleClass('-active')
+    headerLoginButton.on('click', function(){
+        headerLogin.toggleClass('-active');
     });
 
+    headerSearchToggle.on('click', function() {
+        headerSearch.toggleClass('-active');
+    });
 };
 
 module.exports = Header;

@@ -1,0 +1,23 @@
+.category-module {
+    margin-bottom: 40px;
+
+    &__title {
+        font-weight: 900;
+        color: $orange;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 32px;
+
+        @include mq(sm) {
+            font-size: 40px;
+            text-align: left;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
