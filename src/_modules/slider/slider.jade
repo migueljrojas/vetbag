@@ -22,3 +22,8 @@ mixin slider(klass, mode)
         ._slider-fourslides(class=klass)
             if block
                 block
+
+    if mode == 'thumbnails'
+        ._slider-thumbnail(class=klass)
+            if block
+                block

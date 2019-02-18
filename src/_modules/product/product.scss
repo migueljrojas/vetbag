@@ -6,10 +6,10 @@
     outline: none;
     position: relative;
     min-height: 90vh;
+    margin-bottom: 20px;
 
     @include mq(sm) {
         min-height: 62vh;
-        margin-bottom: 20px;
     }
 
     &--left {

@@ -7,6 +7,7 @@ var Slider = function() {
     var sliderAll = $('._slider-all');
     var sliderMulti = $('._slidermulti');
     var sliderFourSlides = $('._slider-fourslides');
+    var sliderThumbnail = $('._slider-thumbnail');
 
     if (slider) {
         slider.each(function(){
@@ -16,6 +17,29 @@ var Slider = function() {
                 arrows: true,
                 infinite: true,
                 autoplay: true
+            });
+        });
+    }
+
+    if (sliderThumbnail) {
+        sliderThumbnail.each(function(){
+            $(this).slick({
+                dots: false,
+                fade: true,
+                arrows: true,
+                infinite: true,
+                asNavFor: '.slider-nav',
+                autoplay: true
+            });
+
+            $('.slider-nav').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: sliderThumbnail,
+                dots: false,
+                arrows: false,
+                centerMode: false,
+                focusOnSelect: true
             });
         });
     }

@@ -1,0 +1,135 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+include ../_modules/product/product
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.descripcion-producto
+        section.descripcion-producto__producto
+            .container
+                .row
+                    .col-24.col-sm-12.descripcion-producto__producto__col
+                        .descripcion-producto__producto__wrapper
+                            +slider('descripcion-producto__producto__slider', 'thumbnails')
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__image
+                                        img(src="/images/pack-royal-canin.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__image
+                                        img(src="/images/pack-gatos.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__image
+                                        img(src="/images/pack-pedigree.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__image
+                                        img(src="/images/pack-royal-canin.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__image
+                                        img(src="/images/pack-gatos.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__image
+                                        img(src="/images/pack-pedigree.png")
+                            .descripcion-producto__producto__slider-nav.slider-nav
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__thumbnail
+                                        img(src="/images/pack-royal-canin.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__thumbnail
+                                        img(src="/images/pack-gatos.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__thumbnail
+                                        img(src="/images/pack-pedigree.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__thumbnail
+                                        img(src="/images/pack-royal-canin.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__thumbnail
+                                        img(src="/images/pack-gatos.png")
+                                .descripcion-producto__producto__slide
+                                    .descripcion-producto__producto__thumbnail
+                                        img(src="/images/pack-pedigree.png")
+                    .col-24.col-sm-12.descripcion-producto__producto__col.descripcion-producto__producto__col--right
+                        .descripcion-producto__producto__wrapper
+                            .descripcion-producto__producto__container
+                                span.descripcion-producto__producto__type Alimento
+                                span.descripcion-producto__producto__type Adulto
+                                span.descripcion-producto__producto__type Pedigree
+                            h2.descripcion-producto__producto__title Pedigree Adulto Carne Pollo Y Cereales
+                            span.descripcion-producto__producto__price $ 1.129
+                            .descripcion-producto__producto__group
+                                .descripcion-producto__producto__button
+                                    p.descripcion-producto__producto__label Tamaño
+                                    +button('select')
+                                        option 1 Kg.
+                                        option 3 Kg.
+                                        option 7 Kg.
+                                        option 10 Kg.
+                                        option 15 Kg.
+                                        option 20 Kg.
+                                .descripcion-producto__producto__button
+                                    p.descripcion-producto__producto__label Cantidad
+                                    input.descripcion-producto__producto__input(type="number" placeholder="1")
+                            .descripcion-producto__producto__group.descripcion-producto__producto__group--ecommerce
+                                .descripcion-producto__producto__button
+                                    +button('link', 'Comprar ahora', '#')
+                                .descripcion-producto__producto__button.descripcion-producto__producto__button--transparent
+                                    +button('link', 'Agregar al carrito', '#')
+                            .descripcion-producto__producto__social
+                                .descripcion-producto__producto__social-wrapper
+                                    p.descripcion-producto__producto__label Valoración
+                                    .descripcion-producto__producto__social-group 
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                        i.fa.fa-star
+                                .descripcion-producto__producto__social-wrapper
+                                    p.descripcion-producto__producto__label Compartir
+                                    ul.descripcion-producto__producto__social-group 
+                                        li.descripcion-producto__producto__social-item
+                                            a(href="#")
+                                                i.fa.fa-facebook
+                                        li.descripcion-producto__producto__social-item
+                                            a(href="#")
+                                                i.fa.fa-twitter
+                                        li.descripcion-producto__producto__social-item
+                                            a(href="#")
+                                                i.fa.fa-google-plus
+        
+        section.descripcion-producto__descripcion
+            .container
+                .row
+                    .col-24.col-sm-12
+                        .row
+                            .col-24
+                                h3.descripcion-producto__descripcion__title Descripción
+                        .row
+                            .col-24
+                                p.descripcion-producto__descripcion__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                    .col-24.col-sm-12
+                        .row
+                            .col-24
+                                h3.descripcion-producto__descripcion__title Ficha Técnica
+                        .row
+                            .col-24
+                                p.descripcion-producto__descripcion__text 
+                                .descripcion-producto__descripcion__group
+                                    p.descripcion-producto__descripcion__text Edad
+                                    p.descripcion-producto__descripcion__text.descripcion-producto__descripcion__text--orange Adulto
+                                .descripcion-producto__descripcion__group
+                                    p.descripcion-producto__descripcion__text Tamaño
+                                    p.descripcion-producto__descripcion__text.descripcion-producto__descripcion__text--orange Mediano
+                                .descripcion-producto__descripcion__group
+                                    p.descripcion-producto__descripcion__text Sabor
+                                    p.descripcion-producto__descripcion__text.descripcion-producto__descripcion__text--orange Carne
+                                .descripcion-producto__descripcion__group
+                                    p.descripcion-producto__descripcion__text Calidad nutricional
+                                    p.descripcion-producto__descripcion__text.descripcion-producto__descripcion__text--orange Sin Gluten
+                                .descripcion-producto__descripcion__group
+                                    p.descripcion-producto__descripcion__text Clasificación
+                                    p.descripcion-producto__descripcion__text.descripcion-producto__descripcion__text--orange Premium
