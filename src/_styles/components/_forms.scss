@@ -1,36 +1,69 @@
-._form{
-    input,
-    textarea{
-        outline:none;
-        background: $lightGray;
-        border-radius:5px;
-        width:100%;
-        font-size: 14px;
+.vb-form{
+    $f: &;
+
+    &__group {
+        position: relative;
+        padding-top: 20px;
+        margin: 8px 0;
+
+        &--center {
+            text-align: center;
+        }
+    }
+
+    &__input {
+        @include trans;
+        background: $white;
+        border: 1px solid $lightGray;
+        border-radius: 5px;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        width: 100%;
+        height: 40px;
+        padding: 0 15px;
+
+        @include mq(md) {
+            height: 50px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+
+            &::placeholder{
+                opacity:0;
+            }
+
+            & + #{$f}__label {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+        
+        &--textarea {
+            padding: 15px;
+            height: 160px;
+        }
+
+        &::placeholder{
+            @include trans;
+            opacity:.8;
+        }
+    }
+
+    &__label{
+        @include trans;
+
+        font-size: 12px;
         font-weight: 600;
-        padding: $base/4;
-        color:$darkGray;
-        margin-bottom: $base/4;
-
-        &:last-child{
-            margin-bottom: 0;
-        }
-    }
-
-    label{
-        color:$darkGray;
-    }
-
-    ::placeholder{
-        opacity:.3;
-    }
-    ._submit{
-        color:#fff;
-        background: $link;
-        width: 300px;
-        transition: all .3s ease;
-
-        &:hover{
-            background: $linkHover;
-        }
+        text-transform: uppercase;
+        position: absolute;
+        top: 2px;
+        left: 15px;
+        transform: translateY(20px);
+        opacity: 0;
+        pointer-events: none;
+        color: $orange;
+        
     }
 }

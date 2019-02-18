@@ -21,7 +21,10 @@
         opacity: 1;
     }
 
-    &__link {
+    &__link,
+    &__submit {
+        @include trans;
+        
         display: inline-block;
         color: $white;
         background: $orange;
@@ -33,9 +36,11 @@
         font-size: 16px;
         font-weight: 600;
         height: 45px;
-        line-height: 45px;
+        line-height: 41px;
         text-align: center;
         min-width: 120px;
+        border:none;
+        border: 2px solid transparent;
 
         &:hover {
             background: darken($orange, 10%);
@@ -48,9 +53,16 @@
 
         @include mq(lg) {
             height: 60px;
-            line-height: 60px;
+            line-height: 56px;
+        }
+
+        &.button--ghost {
+            border: 2px solid $orange;
+            background: transparent;
+            color: $orange;
         }
     }
+
 
     &__select {
         width: 100%;

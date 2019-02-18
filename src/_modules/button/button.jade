@@ -1,11 +1,16 @@
-mixin button(mode, description, href, id, name)
+
+mixin button(mode, description, href, id, name, type)
+    - var buttonType = type == 'ghost' || type == 'purple' ? type : 'normal';
     .button
         if mode === 'radio'
             input.button__input(type="radio" id=name name=id)
             label.button__label(for=name)=description
             
         if mode === 'link'
-            a.button__link(href=href)=description
+            a.button__link(href=href, class="button--#{buttonType}")=description
+
+        if mode === 'submit'
+            button.button__submit(type="submit", class="button--#{buttonType}")=description
             
         if mode === 'select'
             select.button__select
