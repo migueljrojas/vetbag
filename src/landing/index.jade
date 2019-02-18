@@ -1,8 +1,63 @@
 extends ../_layouts/base-landing
 
+include ../_modules/button/button
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p landing page
+    main.landing
+        section.landing__hero
+            .landing__hero__ornaments
+                img._left-big(src="/images/circle-left-purple.svg")
+                img._left-small(src="/images/circle-right-small.svg")
+                img._right(src="/images/circles-left-big.svg")
+            .container
+                .row
+                    .col-24
+                        .landing__hero__illustrations
+                            img._student(src="/images/illustration-left.svg")
+                            img._doctor(src="/images/illustration-right.svg")
+
+                        .landing__hero__content
+                            h1.landing__hero__title ¡Únete ya a VetBag!
+                            h2.landing__hero__subtitle La tienda online de los veterinarios
+                            p.landing__hero__text Genera tu propia página de ventas de productos online accediendo a un amplio portafolio que podrás recomendar a tus clientes.
+                            +button('link', '¡Quiero Unirme!', '#')
+
+        section.landing__video
+            .container
+                .row
+                    .col-24.col-sm-16.offset-sm-4
+                        .landing__video__wrapper
+                            iframe(src="https://www.youtube.com/embed/Se5bTIt_RyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+        section.landing__signup
+        section.landing__contacto
+            .container  
+                .row
+                    .col-24.col-sm-14.offset-sm-5
+                        h2.landing__contacto__title ¿Tienes preguntas?
+
+                        form.vb-form
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Nombre")
+                                label.vb-form__label Nombre
+
+                            .vb-form__group
+                                input.vb-form__input(type="email" placeholder="Email")
+                                label.vb-form__label Email
+
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Telefono")
+                                label.vb-form__label Telefono
+
+                            .vb-form__group
+                                textarea.vb-form__input.vb-form__input--textarea(placeholder="Mensaje")
+                                label.vb-form__label Mensaje
+
+                            .vb-form__group.vb-form__group--center
+                                +button('submit', 'Enviar')
+
+

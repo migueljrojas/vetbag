@@ -1,0 +1,141 @@
+.landing{
+    background: $lightestGray;
+
+    section {
+        min-height: 60vh;
+        padding: 40px 0;
+
+        @include mq(sm) {
+            padding: 7% 0;
+        }
+    }
+
+    &__hero {
+        position: relative;
+
+        &__ornaments {
+            position: absolute;
+            top: 0;
+            right:0;
+            bottom:0;
+            left: 0;
+
+            img {
+                position: absolute;
+            }
+
+            ._left-big {
+                top: 20%;
+                left:0;
+            }
+
+            ._left-small {
+                top: 15%;
+                left:10%;
+            }
+
+            ._right {
+                right: 5%;
+                transform: rotate(150deg);
+                width: 15vw;
+            }
+        }
+
+        &__content {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: $darkGray;
+            padding: 3% 0 7%;
+        }
+
+        &__title,
+        &__subtitle {
+            color: $orange;
+            line-height: 1;
+            margin: 0 0 10px;
+        }
+
+        &__illustrations {
+            position: absolute;
+            top: 0;
+            right:0;
+            bottom:0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &__title {
+            font-size: 36px;
+
+            @include mq(md) {
+                font-size: 60px;
+            }
+        }
+
+        &__subtitle {
+            font-size: 24px;
+
+            @include mq(md) {
+                font-size: 48px;
+            }
+        }
+
+        &__text {
+            font-weight: 600;
+            max-width: 600px;
+            margin: 60px auto 100px;
+        }
+    }
+
+    &__video {
+        background: $yellow url('/images/bones-pattern.png') repeat center center;
+    
+        &__wrapper {
+            width: 100%;
+            position: relative;
+            height: 0;
+            padding-bottom: 56.5%;
+            overflow: hidden;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                right:0;
+                bottom:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__signup {
+        background: $white;
+    }
+
+    &__contacto {
+        background: $purple url('/images/iso-perro-purple-big.svg') no-repeat center right / 60vh;
+
+        &__title {
+            color: $white;
+            font-size: 32px;
+            text-align: center;
+            font-weight: 900;
+            margin-top: 0;
+
+            @include mq(sm) {
+                font-size: 40px;
+            }
+        }
+
+        .vb-form__label {
+            color: $white;
+        }
+    }
+}

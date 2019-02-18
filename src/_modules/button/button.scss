@@ -60,6 +60,10 @@
             border: 2px solid $orange;
             background: transparent;
             color: $orange;
+
+            &:hover {
+                background: rgba(0,0,0,.05);
+            }
         }
     }
 
