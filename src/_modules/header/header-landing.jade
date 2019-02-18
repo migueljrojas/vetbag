@@ -6,53 +6,43 @@ header.header
                     .header__logo
                         img(src="/images/logo.svg")
                     .header__search
-                        form.header__search__form
-                            input.header__search__input(type="text", placeholder="Buscar...")
-                            button.header__search__button
+                        form.header__form
+                            input.header__input(type="text", placeholder="Buscar...")
+                            button.header__button
                                 i.fa.fa-search
-                    .header__actions
-                        .header__search-toggle
-                            i.fa.fa-search
-                            i.fa.fa-times
-                        .header__login
-                            .header__login__button
-                                .header__actions__icon
-                                    img(src="/images/icon-user.svg")
-                                span.header__actions__text Mi Cuenta
-                                span.header__login__button-chevron
-                            .header__login__dropdown
-                                ul
-                                    li.header__login__dropdown-item
-                                        a.header__login__dropdown-item__link(href="#")
-                                            .header__login__dropdown-item__icon
-                                                img(src="/images/icon-tasks.svg")
-                                            span.header__login__dropdown-item__name Mis Datos
-                                    li.header__login__dropdown-item
-                                        a.header__login__dropdown-item__link(href="#")
-                                            .header__login__dropdown-item__icon
-                                                img(src="/images/icon-bag.svg")
-                                            span.header__login__dropdown-item__name Mis Ordenes
-                                    li.header__login__dropdown-item
-                                        a.header__login__dropdown-item__link(href="#")
-                                            .header__login__dropdown-item__icon
-                                                img(src="/images/icon-comments.svg")
-                                            span.header__login__dropdown-item__name Mensajes
-                                    li.header__login__dropdown-item
-                                        a.header__login__dropdown-item__link(href="#")
-                                            .header__login__dropdown-item__icon
-                                                img(src="/images/icon-logout.svg")
-                                            span.header__login__dropdown-item__name Salir
-                        
-                        a.header__shop-cart(href="#")
-                            .header__actions__icon
-                                img(src="/images/icon-cart.svg")
-                                span 4
-                            span.header__actions__text Mi Carrito
-
-                        .header__hamburguer
-                            span
-                            span
-                            span
+                    .header__group
+                        .header__group__login
+                            .header__group-image
+                                img(src="/images/icon-user.svg")
+                            p.header__menu Mi Cuenta
+                            span.header__dropdown-button
+                            ul.header__dropdown
+                                li.header__item
+                                    a(href="#")
+                                        .header__item-icon
+                                            img(src="#")
+                                        p.header__item-name Mis Datos
+                                li.header__item
+                                    a(href="#")
+                                        .header__item-icon
+                                            img(src="#")
+                                        p.header__item-name Mis Ordenes
+                                li.header__item
+                                    a(href="#")
+                                        .header__item-icon
+                                            img(src="#")
+                                        p.header__item-name Mensajes
+                                li.header__item
+                                    a(href="#")
+                                        .header__item-icon
+                                            img(src="#")
+                                        p.header__item-name Salir
+                        .header__group__shop-cart
+                            a(href="#")
+                                .header__group-image
+                                    img(src="/images/icon-cart.svg")
+                                    span 4
+                                .header__menu Mi Carrito 
                                 
         .row
             .col-24
@@ -60,7 +50,7 @@ header.header
                     nav.header__nav
                         ul.header__nav__list
                             li.header__nav__item
-                                a.header__nav__link(href="#") perros
+                                a.header__nav__button(href="#") perros
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -79,7 +69,7 @@ header.header
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
                             li.header__nav__item
-                                a.header__nav__link(href="#") gatos
+                                a.header__nav__button(href="#") gatos
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -98,7 +88,7 @@ header.header
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
                             li.header__nav__item
-                                a.header__nav__link(href="#") peces 
+                                a.header__nav__button(href="#") peces 
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -117,7 +107,7 @@ header.header
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
                             li.header__nav__item
-                                a.header__nav__link(href="#") pajaros            
+                                a.header__nav__button(href="#") pajaros            
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -136,7 +126,7 @@ header.header
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
                             li.header__nav__item
-                                a.header__nav__link(href="#") roedores            
+                                a.header__nav__button(href="#") roedores            
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -155,7 +145,7 @@ header.header
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
                             li.header__nav__item
-                                a.header__nav__link(href="#") reptiles          
+                                a.header__nav__button(href="#") reptiles          
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -174,7 +164,7 @@ header.header
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
                             li.header__nav__item
-                                a.header__nav__link(href="#") otros
+                                a.header__nav__button(href="#") otros
                                 ul.header__nav__sublist
                                     li.header__nav__subitem
                                         a(href="#") Alimento
@@ -192,7 +182,6 @@ header.header
                                         a(href="#") Transporte y viaje
                                     li.header__nav__subitem
                                         a(href="#") Antiparasitarios
-                        ul.header__nav__list
-                            li.header__nav__item
-                                a.header__nav__link.header__nav__link--vendedores(href="#")  vendedores
+
+                    a.header__vendedores(href="#")  vendedores
                                            

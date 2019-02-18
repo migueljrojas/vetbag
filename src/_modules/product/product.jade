@@ -1,10 +1,11 @@
 mixin product(price, description, button, productId, imageSrc)
-    form.product.product--image-top
+    form.product.border
         .product__image
-            img(src=imageSrc)
-        .product__content
+            a(href="#")
+                img(src=imageSrc)
+        .product__info
             span.product__price=price
-            p.product__description=description
+            a.product__description(href="#")=description
         .product__size
             if button
                 each element,index in button
@@ -13,12 +14,12 @@ mixin product(price, description, button, productId, imageSrc)
             +button('link', 'Agregar al carrito', '#')
 
 mixin category(title, description, imageSrc, button)
-    .product.product--left
-        .product__image.product__image--left
+    .category.border
+        .category__image
             img(src=imageSrc)
-        .product__wrapper
-            .product__content
-                p.product__title=title
-                p.product__description.product__description--image-left=description
-            .product__button.product__button--image-left
+        .category__content
+            .category__description
+                p.category__supertitle=title
+                p.category__title=description
+            .category__button.category__button--image-left
                 +button('link', button.text, button.link)

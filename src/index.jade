@@ -3,69 +3,70 @@ extends _layouts/base
 include ./_modules/slider/slider
 include ./_modules/product/product
 include ./_modules/button/button
+include ./_modules/category-module/category-module
 
 block content
     main.home
         section.home__hero
             .container
                 .row
-                    .col-xs-24.col-sm-16
+                    .col-24.col-md-16
                         +slider('home__hero__slider', 'alt')
+
                             .home__hero__slide
                                 .home__hero__slide-background
                                     img(src="/images/iso-perro-yellow.png")
-                                .home__hero__wrapper
-                                    p.home__hero__text.home__hero__text--orange 10% de descuento
-                                    p.home__hero__text.home__hero__text--white en productos
-                                    .home__hero__brand
-                                        img(src="/images/logo-pro-plan.png")
-                                .home__hero__group
-                                    p.home__hero__group-text Código Promocional
-                                    a.home__hero__group-link vetpro10
+                                .home__hero__slide-wrapper
+                                    .home__hero__slide-info
+                                        p.home__hero__slide-info-text
+                                            span 10% de descuento
+                                            | en productos
+                                            img(src="/images/logo-pro-plan.png")
+                                    .home__hero__slide-cta
+                                        p.home__hero__slide-cta-text Código Promocional
+                                        a.home__hero__slide-cta-button(href="#") vetpro10
+
                             .home__hero__slide
                                 .home__hero__slide-background
                                     img(src="/images/iso-perro-yellow.png")
-                                .home__hero__wrapper
-                                    p.home__hero__text.home__hero__text--orange 10% de descuento
-                                    p.home__hero__text.home__hero__text--white en productos
-                                    .home__hero__brand
-                                        img(src="/images/logo-royal-canin.png")
-                                .home__hero__group
-                                    p.home__hero__group-text Código Promocional
-                                    a.home__hero__group-link vetpro12
+                                .home__hero__slide-wrapper
+                                    .home__hero__slide-info
+                                        p.home__hero__slide-info-text
+                                            span 15% de descuento
+                                            | en productos
+                                            img(src="/images/logo-pro-plan.png")
+                                    .home__hero__slide-cta
+                                        p.home__hero__slide-cta-text Código Promocional
+                                        a.home__hero__slide-cta-button(href="#") vetpro15
                                         
-                    .col-xs-24.col-sm-8
-                        .home__hero__container
-                            .home__hero__dog-image
-                                img(src="/images/perro-alfombra.png")
-                            .home__hero__stamp
-                                img(src="/images/pack-gatos.png")
-                            .home__hero__purple-box
-                            .home__hero__purple-dog-watermark
-                                img(src="/images/iso-perro-purple.png")
-                            .home__hero__content
-                                .home__hero__content-wrapper
-                                    p.home__hero__text.home__hero__text--orange.home__hero__text--orange--small Cama térmica
-                                    p.home__hero__text.home__hero__text--white.home__hero__text--white--small para perro/gato
-                                p.home__hero__text.home__hero__text--white.home__hero__text--white--small $2.200
-                                
-                        .home__hero__container.home__hero__container--bottom
-                            .home__hero__yellow-container
-                                p.home__hero__text.home__hero__text--orange.home__hero__text--orange--alternative Oferta
-                                p.home__hero__text.home__hero__text--orange.home__hero__text--orange--alternative del mes
-                            .home__hero__content.home__hero__content--bottom
-                                p.home__hero__text.home__hero__text--white.home__hero__text--white--medium Royal Canin Mini
-                                p.home__hero__text.home__hero__text--white.home__hero__text--white--medium Adulto - 1 Kg
-                                strike.home__hero__text.home__hero__text--white.home__hero__text--white--medium $236,00
-                                p.home__hero__text.home__hero__text--white.home__hero__text--white--large $196,67
-                            .home__hero__food-image
-                                img(src="/images/pack-royal-canin.png")
+                    .col-24.col-md-8
+                        .row
+                            .col-24.col-sm-12.col-md-24
+                                .home__hero__banner
+                                    .home__hero__banner-image
+                                        img(src="/images/banner-top.png")
+                                    .home__hero__banner-stamp Novedad
+                                    .home__hero__banner-content.home__hero__banner-content--right
+                                        p._desc
+                                            span Cama térmica
+                                            | para perro/gato
+                                        p._price $2.200
+
+                            .col-24.col-sm-12.col-md-24 
+                                .home__hero__banner
+                                    .home__hero__banner-image
+                                        img(src="/images/banner-bottom.png")
+                                    .home__hero__banner-content
+                                        p._desc Royal Canin Mini Adulto - 1 Kg
+                                        p._price._price--old $236,00
+                                        p._price._price--new $196,67
+
         
         section.home__brands
             .container
                 .row
                     .col-24
-                        +slider('home__brands__slider', 'fourSlides')
+                        +slider('home__brands__slider border', 'fourSlides')
                             .home__brands__slide
                                 .home__brands__image
                                     img(src="/images/logo-pedigree.png")
@@ -93,11 +94,14 @@ block content
                                     +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
                             each item,index in site.data.product
                                 .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
+                                    +product(item.price, item.description, item.button, "producto-" + (index + 1) * 3, "/images/pack-pedigree.png")
                             each item,index in site.data.product
                                 .home__top-sales__slide
-                                    +product(item.price, item.description, item.button, "producto-" + index, "/images/pack-pedigree.png")
-
+                                    +product(item.price, item.description, item.button, "producto-" + (index + 2) * 5, "/images/pack-pedigree.png")
+                            each item,index in site.data.product
+                                .home__top-sales__slide
+                                    +product(item.price, item.description, item.button, "producto-" + (index + 3) * 7, "/images/pack-pedigree.png")
+                           
         section.home__seleccion
             .container
                 .row
@@ -107,10 +111,7 @@ block content
                         - var categoryButton = {"text":"Ver más", "link":"/categoria-productos"}
 
                         .home__seleccion__wrapper
-                            +category("perros", "Alimento para perros", "/images/pack-pedigree.png", categoryButton)
-                            +category("gatos", "Alimento para gatos", "/images/pack-gatos.png", categoryButton)
-                            +category("perros", "Collares para perros", "/images/collar-perros.png", categoryButton)
-                            +category("roedores", "Casas para roedores", "/images/casa-roedores.png", categoryButton)
+                            +category-module
 
         section.home__politicas
             .container

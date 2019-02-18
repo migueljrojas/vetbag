@@ -48,10 +48,10 @@ var Slider = function() {
         sliderMulti.each(function(){
             $(this).slick({
                 dots: false,
-                infinite: true,
+                infinite: false,
                 speed: 300,
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: 4,
                 autoplay: true,
                 responsive: [
                     {
@@ -64,7 +64,7 @@ var Slider = function() {
                     {
                         breakpoint: 480,
                         settings: {
-                            centerMode: true,
+                            centerMode: false,
                             slidesToShow: 1,
                             slidesToScroll: 1
                         }
