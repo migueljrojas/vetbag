@@ -1,0 +1,73 @@
+.user {
+    background: $lightestGray;
+
+    &--login,
+    &--registration {
+        padding-bottom: 40px;
+
+        &__hero {
+            background: $yellow;
+            position: relative;
+            height: 20vh;
+            margin-bottom: 95px;
+        }
+
+        &__image {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate3d(-50%, 50%, 0);
+        }
+
+        &__container {
+            width: 100%;
+
+            &--right {
+                border-bottom: 1px solid $lightGray;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+
+                @include mq(sm) {
+                    border-right: 1px solid $lightGray;
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &__wrapper {
+            padding: 0 15px;
+
+            @include mq(sm) {
+                width: 70%;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &__title {
+            @include sectionTitle;
+
+            padding-top: 10px;
+
+            @include mq(sm) {
+                text-align: center;
+            }
+        }
+
+        &__subtitle {
+            color: $orange;
+            margin-bottom: 0;
+        }
+
+        &__group {
+            margin: 20px 0;
+        }
+
+        &__link {
+            margin: 20px 0;
+        }
+    }
+}

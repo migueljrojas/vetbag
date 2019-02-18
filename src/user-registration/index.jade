@@ -1,0 +1,100 @@
+extends ../_layouts/base
+
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.user.user--registration
+        .user--registration__hero
+            .user--registration__image
+                img(src="/images/user.png")
+        .container
+            form.row.vb-form
+                .col-24
+                    h3.user--registration__subtitle Información del Cliente
+            .row
+                .col-24.col-sm-18.offset-sm-3
+                    form.row.vb-form
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Email*")
+                                label.vb-form__label Email*
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Contraseña*")
+                                label.vb-form__label Contraseña*
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Confirmar contraseña*")
+                                label.vb-form__label Confirmar contraseña*
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Nombre*")
+                                label.vb-form__label Nombre*
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Apellido paterno*")
+                                label.vb-form__label Apellido paterno*
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Apellido materno (opcional)")
+                                label.vb-form__label Apellido materno (opcional)
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="RUT* 11.111.111-k")
+                                label.vb-form__label RUT* 11.111.111-k
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                +button('select')
+                                    option(selected hidden disabled) Género*
+                                    option Femenino
+                                    option Masculino
+                        .col-24.col-sm-12
+                            .vb-form__group
+                                input.vb-form__input(type="date" placeholder="Fecha de nacimiento")
+                                p.checkout__login__pass-recovery *Campos obligatorios
+            ._divider        
+            .row
+                .col-24
+                    .row
+                        .col-24
+                            h2.user--registration__subtitle Cuentanos de tu/s mascota
+                    .row
+                        .col-24.col-sm-18.offset-sm-3
+                            form.row.vb-form
+                                .col-24.col-sm-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="text" placeholder="Me llamo")
+                                        label.vb-form__label Me llamo
+                                .col-24.col-sm-12
+                                    .vb-form__group
+                                        +button('select')
+                                            option(selected hidden disabled) Soy un
+                                            option Perro
+                                            option Gato
+                                .col-24.col-sm-12
+                                    .vb-form__group
+                                        +button('select')
+                                            option(selected hidden disabled) Mi tamaño es...
+                                            option Pequeño
+                                            option Mediano
+                                            option Grande
+                                .col-24.col-sm-12
+                                    .vb-form__group
+                                        +button('select')
+                                            option(selected hidden disabled) Tengo entre...
+                                            option 1 y 2 años
+                                            option 3 y 5 años
+                                            option 6 y 8 años
+                                .col-24.col-sm-12
+                                    .vb-form__group
+                                        +button('select')
+                                            option(selected hidden disabled) Raza
+                                            option Mestizo
+                                            option Puro
+                        .col-24
+                            .vb-form__group.vb-form__group--center
+                                +button('link', 'Registrarme', '#', '', '', '')
