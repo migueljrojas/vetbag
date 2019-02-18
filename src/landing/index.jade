@@ -34,6 +34,105 @@ block content
                             iframe(src="https://www.youtube.com/embed/Se5bTIt_RyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
         section.landing__signup
+            .landing__signup__ornaments
+                img._left-big(src="/images/circles-left-big.svg")
+                img._left-small(src="/images/circle-right-small.svg")
+                img._right-big(src="/images/circle-right-big.svg")
+                img._right-small(src="/images/circle-right-small.svg")
+            .landing__signup__form
+                .container
+                    .row
+                        .col-24.col-sm-12.offset-sm-6
+                            h2.landing__signup__title Quiero unirme
+                            .vb-form
+                                .landing__signup__section
+                                    h3.landing__signup__subtitle Datos personales
+                                    .row
+                                        .col-24
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Nombre *")
+                                                label.vb-form__label Nombre
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Apellido paterno *")
+                                                label.vb-form__label Apellido paterno
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Apellido materno (opcional)")
+                                                label.vb-form__label Apellido materno
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                select.vb-form__input.vb-form__input--select
+                                                    option(hidden, selected, disabled) Género
+                                                    option Masculino
+                                                    option Femenino
+                                                label.vb-form__label Género
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="RUT (12-039-861-k) *")
+                                                label.vb-form__label RUT
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="email", placeholder="Email *")
+                                                label.vb-form__label Email
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Teléfono celular")
+                                                label.vb-form__label Teléfono celular
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input.vb-form__input--date(type="date", placeholder="")
+                                                label.vb-form__label Fecha de Nacimiento
+                                                p.vb-form__disclaimer * Campos obligatorios
+                                
+                                .landing__signup__section
+                                    h3.landing__signup__subtitle Domicilio
+                                    .row
+                                        .col-24
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Dirección")
+                                                label.vb-form__label Dirección
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Región")
+                                                label.vb-form__label Región
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Comuna")
+                                                label.vb-form__label Comuna
+
+                                .landing__signup__section
+                                    h3.landing__signup__subtitle Educación
+                                    .row
+                                        .col-24
+                                            .vb-form__group
+                                                input.vb-form__input(type="text", placeholder="Universidad")
+                                                label.vb-form__label Universidad
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input.vb-form__input--radio(type="radio", id="vet", name="usertype")
+                                                label.vb-form__label.vb-form__label--radio(for="vet")
+                                                    | Soy  
+                                                    span.vb-form__label-info Médico veterinario
+
+                                        .col-24.col-sm-12
+                                            .vb-form__group
+                                                input.vb-form__input.vb-form__input--radio(type="radio", id="estudent", name="usertype")
+                                                label.vb-form__label.vb-form__label--radio(for="estudent")
+                                                    | Soy  
+                                                    span.vb-form__label-info estudiante de medicina veterinaria
+                                        .col-24
+                                            .vb-form__group.vb-form__group--center
+                                                input.vb-form__input.vb-form__input--checkbox(type="checkbox", id="terms")
+                                                label.vb-form__label.vb-form__label--checkbox(for="terms")
+                                                    a(href="#") Aceptar terminos y condiciones
+                                            
+                                            .vb-form__group.vb-form__group--center
+                                                img(src="/images/captcha.png")
+                                            
+                                            .vb-form__group.vb-form__group--center
+                                                +button('submit', 'Enviar')
+
         section.landing__contacto
             .container  
                 .row

@@ -20,9 +20,15 @@
         width: 100%;
         height: 40px;
         padding: 0 15px;
+        color: $darkGray;
 
         @include mq(md) {
             height: 50px;
+        }
+
+        &::placeholder{
+            @include trans;
+            opacity:.8;
         }
 
         &:focus {
@@ -45,9 +51,23 @@
             height: 160px;
         }
 
-        &::placeholder{
-            @include trans;
-            opacity:.8;
+        &--select {
+            padding-left: 11px;
+        }
+
+        &--radio,
+        &--checkbox {
+            position: absolute;
+            left: -9999px;
+
+            &:checked {
+                & + #{$f}__label {
+                    &:after {
+                        opacity: 1;
+                        transform: scale3d(1,1,1);
+                    }
+                }
+            }
         }
     }
 
@@ -65,5 +85,112 @@
         pointer-events: none;
         color: $orange;
         
+        &--checkbox {
+            padding-left: 30px;
+            position: relative;
+            opacity: 1;
+            pointer-events: all;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+            text-transform: none;
+            cursor: pointer;
+            text-decoration: none;
+            transform: translateY(0);
+
+            &:before {
+                content:'';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: $white;
+                border: 1px solid $lightGray;
+                border-radius: 3px;
+                left: 0;
+                top: calc(50% - 10px);
+            }
+
+            &:after {
+                @include trans;
+
+                position: absolute;
+                content: '✔';
+                color: $orange;
+                opacity: 0;
+                transform: scale3d(0,0,0);
+                width: 20px;
+                height: 20px;
+                left: 0;
+                top: calc(50% - 10px);
+                font-size: 12px;
+                line-height: 20px;
+                text-align: center;
+            }
+        }
+
+        &--radio {
+            padding-left: 50px;
+            position: relative;
+            opacity: 1;
+            pointer-events: all;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+            text-transform: none;
+            cursor: pointer;
+            text-decoration: none;
+            background: $white;
+            border-radius: 5px;
+            border: 1px solid $lightGray;
+            padding-right: 15px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-weight: 600;
+            display: block;
+            transform: translateY(0);
+            font-size: 18px;
+
+            span {
+                color: $darkGray;
+                display: block;
+                font-size: 14px;
+                margin-top: 3px;
+            }
+
+            &:before {
+                content:'';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: $white;
+                border: 1px solid $lightGray;
+                border-radius: 3px;
+                left: 15px;
+                top: calc(50% - 10px);
+                border-radius: 50%;
+            }
+
+            &:after {
+                @include trans;
+
+                position: absolute;
+                content: '•';
+                color: $orange;
+                opacity: 0;
+                transform: scale3d(0,0,0);
+                width: 20px;
+                height: 20px;
+                left: 15px;
+                top: calc(50% - 10px);
+                font-size: 28px;
+                line-height: 16px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__disclaimer {
+        color: $orange;
+        font-size: 14px;
     }
 }
