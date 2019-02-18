@@ -109,10 +109,23 @@ block content
                 .row
                     .col-24.col-sm-14.offset-sm-5
                         h2.home__contact__title ¿Tienes preguntas?
-                        form.home__contact__form
-                            input.home__contact__input(type="text" placeholder="Nombre")
-                            input.home__contact__input(type="email" placeholder="Email")
-                            input.home__contact__input(type="number" placeholder="Telefono")
-                            textarea.home__contact__input.home__contact__input--textarea(placeholder="Mensaje")
-                            .home__contact__button
-                                +button('link', 'Enviar', '#', '')
+
+                        form.vb-form
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Nombre")
+                                label.vb-form__label Nombre
+
+                            .vb-form__group
+                                input.vb-form__input(type="email" placeholder="Email")
+                                label.vb-form__label Email
+
+                            .vb-form__group
+                                input.vb-form__input(type="text" placeholder="Telefono")
+                                label.vb-form__label Telefono
+
+                            .vb-form__group
+                                textarea.vb-form__input.vb-form__input--textarea(placeholder="Mensaje")
+                                label.vb-form__label Mensaje
+
+                            .vb-form__group.vb-form__group--center
+                                +button('submit', 'Enviar')

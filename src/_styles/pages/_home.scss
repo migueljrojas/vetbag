@@ -292,9 +292,13 @@
 
     &__politicas {
         background: $yellow;
-        padding: 40px 0;
         position: relative;
-        margin-bottom: 40px;
+        padding: 40px 0;
+
+        @include mq(sm) {
+            padding: 60px 0;
+        }
+        
 
         &__title {
             color: $white;
@@ -335,6 +339,12 @@
     }
 
     &__contact {
+        padding: 40px 0;
+
+        @include mq(sm) {
+            padding: 60px 0;
+        }
+
         &__title {
             color: $purple;
             font-size: 32px;
@@ -345,29 +355,6 @@
             @include mq(sm) {
                 font-size: 40px;
             }
-        }
-
-        &__form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__input {
-            border: 2px solid $lightGray;
-            background: $white;
-            border-radius: 5px;
-            outline: none;
-            padding: 20px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        &__button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            width: 100%;
         }
     }
 }
