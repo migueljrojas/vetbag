@@ -91,7 +91,7 @@
 
         &__slide-info-text {
             margin: 0;
-            font-weight: 700;
+            font-weight: 900;
             font-size: 28px;
             color: $white;
             white-space: nowrap;
@@ -286,7 +286,7 @@
         margin-bottom: 40px;
 
         &__title {
-            font-weight: 700;
+            font-weight: 900;
             color: $purple;
             margin-top: 0;
             margin-bottom: 20px;
@@ -326,30 +326,6 @@
         }
     }
 
-    &__seleccion {
-        margin-bottom: 40px;
-
-        &__title {
-            font-weight: 700;
-            color: $orange;
-            margin-top: 0;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 32px;
-
-            @include mq(sm) {
-                font-size: 40px;
-                text-align: left;
-            }
-        }
-
-        &__wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-    }
-
     &__politicas {
         background: $yellow;
         padding: 40px 0;
@@ -358,7 +334,7 @@
 
         &__title {
             color: $white;
-            font-weight: 700;
+            font-weight: 900;
             font-size: 32px;
             margin: 0;
             text-align: center;
@@ -384,7 +360,7 @@
 
         &__text {
             color: $white;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         &__image {
@@ -399,7 +375,7 @@
             color: $purple;
             font-size: 32px;
             text-align: center;
-            font-weight: 700;
+            font-weight: 900;
             margin-top: 0;
 
             @include mq(sm) {

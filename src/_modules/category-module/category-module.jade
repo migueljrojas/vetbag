@@ -1,10 +1,22 @@
+include ../product/product
+
 mixin category-module()
-    .row
-        .col-24.col-sm-12
-            +category("perros", "Alimento para perros", "/images/pack-pedigree.png", categoryButton)
-        .col-24.col-sm-12
-            +category("gatos", "Alimento para gatos", "/images/pack-gatos.png", categoryButton)
-        .col-24.col-sm-12
-            +category("perros", "Collares para perros", "/images/collar-perros.png", categoryButton)
-        .col-24.col-sm-12
-            +category("roedores", "Casas para roedores", "/images/casa-roedores.png", categoryButton)
+
+    section.category-module
+        .container
+            .row
+                .col-24
+                    h2.category-module__title Nuestra selección
+                    
+                    .category-module__wrapper
+                        - var categoryButton = {"text":"Ver más", "link":"/categoria-productos"}
+
+                        .row
+                            .col-24.col-sm-12
+                                +category("perros", "Alimento para perros", "/images/pack-pedigree.png", categoryButton)
+                            .col-24.col-sm-12
+                                +category("gatos", "Alimento para gatos", "/images/pack-gatos.png", categoryButton)
+                            .col-24.col-sm-12
+                                +category("perros", "Collares para perros", "/images/collar-perros.png", categoryButton)
+                            .col-24.col-sm-12
+                                +category("roedores", "Casas para roedores", "/images/casa-roedores.png", categoryButton)

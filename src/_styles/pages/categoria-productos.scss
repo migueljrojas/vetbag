@@ -30,20 +30,21 @@
         }
 
         &__group {
-            &:last-child {
-                margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-bottom: 30px;
             }
         }
 
         &__item {
             color: $darkGray;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
+            margin-bottom: 10px;
 
             a {
                 color: $darkGray;
                 text-decoration: none;
-                font-weight: 700;
+                font-weight: 300;
             }
 
             &:hover {
@@ -100,18 +101,20 @@
         }
 
         &__subitem {
+            margin-bottom: 10px;
             a {
                 color: $darkGray;
                 text-decoration: none;
-                font-weight: 700;
+                font-weight: 300;
             }
         }
 
         &__group-title {
             color: $orange;
             font-size: 24px;
-            border-bottom: 2px solid $lightGray;
+            border-bottom: 1px solid $lightGray;
             padding-bottom: 20px;
+            font-weight: 600;
         }
 
         &__container {
@@ -120,7 +123,7 @@
 
         &__container-wrapper {
             display: flex;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             align-items: center;
 
             span {
@@ -137,18 +140,23 @@
             outline: none;
             border-radius: 5px;
             border: 2px solid $lightGray;
+            height: 40px;
         }
 
         &__button {
-            width: 100px;
+            width: 225px;
             text-align: center;
-            padding: 10px 0 ;
-            font-size: 14px;
+            height: 40px;
+            font-size: 16px;
             color: $white;
             background: $orange;
             border: none;
             border-radius: 5px;
             outline: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: $mainFont;
+            line-height: 40px;
         }
 
         &__select {

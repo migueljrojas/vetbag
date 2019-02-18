@@ -96,7 +96,7 @@
 
         &__type {
             color: $orange;
-            font-weight: 700;
+            font-weight: 300;
 
             &:not(:last-child) {
                 margin-right: 10px;
@@ -107,6 +107,7 @@
 
         &__title {
             color: $darkGray;
+            font-weight: 600;
 
             @include mq(sm) {
                 font-size: 40px;
@@ -116,7 +117,7 @@
         &__price {
             display: block;
             color: $purple;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 20px;
 
             @include mq(sm) {
@@ -178,7 +179,7 @@
 
         &__label {
             color: $darkGray;
-            font-weight: 700;
+            font-weight: 600;
             margin-right: 20px;
         }
 
@@ -237,7 +238,7 @@
         &__title {
             font-size: 26px;
             color: $orange;
-            font-weight: 700;
+            font-weight: 600;
             margin-top: 0;
         }
 
@@ -254,7 +255,7 @@
 
         &__text {
             color: $darkGray;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 16px;
 
             &--orange {

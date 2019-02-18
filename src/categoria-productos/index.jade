@@ -2,6 +2,7 @@ extends ../_layouts/base
 
 include ../_modules/product/product
 include ../_modules/button/button
+include ../_modules/category-module/category-module
 
 block config
   //- Correct base url pathing for this page
@@ -99,3 +100,6 @@ block content
                                 each item,index in site.data.product
                                     .col-24.col-sm-8
                                         +product(item.price, item.description, item.button, "producto-" + (index + 1)*(n + 3), "/images/pack-pedigree.png")
+
+        
+        +category-module

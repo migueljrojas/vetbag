@@ -51,20 +51,6 @@
         }
     }
 
-    &__description {
-        &--image-left {
-            margin: 0;
-            font-weight: 700;
-            color: $purple;
-            text-transform: uppercase;
-            font-size: 18px;
-
-            @include mq(sm) {
-                font-size: 32px;
-            }
-        }
-    }
-
     &__content {
         margin-bottom: 20px;
     }

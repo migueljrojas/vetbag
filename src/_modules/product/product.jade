@@ -1,11 +1,11 @@
 mixin product(price, description, button, productId, imageSrc)
     form.product.border
         .product__image
-            a(href="#")
+            a(href="/descripcion-producto")
                 img(src=imageSrc)
         .product__info
             span.product__price=price
-            a.product__description(href="#")=description
+            a.product__description(href="/descripcion-producto")=description
         .product__size
             if button
                 each element,index in button

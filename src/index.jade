@@ -102,16 +102,7 @@ block content
                                 .home__top-sales__slide
                                     +product(item.price, item.description, item.button, "producto-" + (index + 3) * 7, "/images/pack-pedigree.png")
                            
-        section.home__seleccion
-            .container
-                .row
-                    .col-24
-                        h2.home__seleccion__title Nuestra selección
-
-                        - var categoryButton = {"text":"Ver más", "link":"/categoria-productos"}
-
-                        .home__seleccion__wrapper
-                            +category-module
+        +category-module
 
         section.home__politicas
             .container
