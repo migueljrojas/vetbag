@@ -8,18 +8,90 @@ block config
   - var baseUrl = '../'
 
 block content
-    main.products
-        section.products__filters
+    main.categoria-productos
+        section.categoria-productos__filters
             .container
                 .row
                     .col-24.col-sm-6
-                        filtros
-                    .col-24.col-sm-18
                         .row
+                            .col-24
+                                .categoria-productos__filters__wrapper
+                                    h3.categoria-productos__filters__title Tipo de Producto
+                        .row
+                            .col-24
+                                .categoria-productos__filters__group
+                                    ul.categoria-productos__filters__list
+                                        each item in site.data.filtros
+                                            li.categoria-productos__filters__item.categoria-productos__filters__item--arrow(data-button=item.target)=item.name
+                                            ul.categoria-productos__filters__sublist(data-list=item.target)
+                                                each type in item.submenu
+                                                    li.categoria-productos__filters__subitem
+                                                        a(href=type.url)=type.tipo
+                                .categoria-productos__filters__group
+                                    h3.categoria-productos__filters__group-title Calidad nutricional
+                                    ul.categoria-productos__filters__list
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Hipoalergénicos
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Sin Gluten
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Sin granos
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Proteínas Alternativas
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Alimentos Terapéuticos
+                                .categoria-productos__filters__group
+                                    h3.categoria-productos__filters__group-title Marca
+                                    ul.categoria-productos__filters__list
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Pro Plan
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Royal Canin
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Vital Can
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Eukanuba
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Purina
+                                .categoria-productos__filters__group
+                                    h3.categoria-productos__filters__group-title Precio
+                                    ul.categoria-productos__filters__list
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Hasta $15.000
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Hasta $35.000
+                                        li.categoria-productos__filters__item
+                                            a(href="#") Hasta $50.000
+                                    .categoria-productos__filters__container
+                                        .categoria-productos__filters__container-wrapper
+                                            input.categoria-productos__filters__input(type="number" placeholder="Mínimo")
+                                            span -
+                                            input.categoria-productos__filters__input(type="number" placeholder="Máximo")
+                                        button.categoria-productos__filters__button Aplicar
+                                .categoria-productos__filters__group
+                                    h3.categoria-productos__filters__group-title Peso
+                                    ul.categoria-productos__filters__list
+                                        li.categoria-productos__filters__item
+                                            a(href="#") 3 Kg.
+                                        li.categoria-productos__filters__item
+                                            a(href="#") 7 Kg.
+                                        li.categoria-productos__filters__item
+                                            a(href="#") 10 Kg.
+                                        li.categoria-productos__filters__item
+                                            a(href="#") 15 Kg.
+                                        li.categoria-productos__filters__item
+                                            a(href="#") 20 Kg.
+                    .col-24.col-sm-18
+                        .row.align-items-end
                             .col-24.col-sm-16
-                                Perros
-                            .col-24.col-sm-8
-                                button
+                                h2.categoria-productos__filters__productos-title Perros
+                            .col-24.col-sm-8.align-self-start
+                                .categoria-productos__filters__select
+                                    +button('select')
+                                        option(disabled selected hidden) Ordernar por
+                                        option Tamaño
+                                        option Precio
+                                        option Marca
                         .row
                             - var n = 1;
                             while n < 5

@@ -6,3 +6,8 @@ mixin button(mode, description, href, id, name)
             
         if mode === 'link'
             a.button__link(href=href)=description
+            
+        if mode === 'select'
+            select.button__select
+                if block
+                    block

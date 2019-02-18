@@ -1,0 +1,146 @@
+[
+    {
+        "name":"Alimento",
+        "target":"Alimento",
+        "submenu": [
+            {
+                "tipo":"Cachorros",
+                "url":"#"
+            },
+            {
+                "tipo":"Adultos",
+                "url":"#"
+            },
+            {
+                "tipo":"Mayores",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Farmacia",
+        "target":"Farmacia",
+        "submenu": [
+            {
+                "tipo":"Medicamentos",
+                "url":"#"
+            },
+            {
+                "tipo":"Gástricos",
+                "url":"#"
+            },
+            {
+                "tipo":"Sedantes",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Entretenimiento",
+        "target":"Entretenimiento",
+        "submenu": [
+            {
+                "tipo":"Pelotas",
+                "url":"#"
+            },
+            {
+                "tipo":"Juguetes",
+                "url":"#"
+            },
+            {
+                "tipo":"Huesos",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Accesorios",
+        "target":"Accesorios",
+        "submenu": [
+            {
+                "tipo":"Collares",
+                "url":"#"
+            },
+            {
+                "tipo":"Placas",
+                "url":"#"
+            },
+            {
+                "tipo":"Ropa",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Snacks y huesos",
+        "target":"Snacks y huesos",
+        "submenu": [
+            {
+                "tipo":"Húmedos",
+                "url":"#"
+            },
+            {
+                "tipo":"Solidos",
+                "url":"#"
+            },
+            {
+                "tipo":"Huesos",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Peluquería e higiene",
+        "target":"Peluquería e higiene",
+        "submenu": [
+            {
+                "tipo":"Corta uñas",
+                "url":"#"
+            },
+            {
+                "tipo":"Peines",
+                "url":"#"
+            },
+            {
+                "tipo":"Tijeras",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Transporte y viaje",
+        "target":"Transporte y viaje",
+        "submenu": [
+            {
+                "tipo":"Casa",
+                "url":"#"
+            },
+            {
+                "tipo":"Transportín",
+                "url":"#"
+            },
+            {
+                "tipo":"Bolso",
+                "url":"#"
+            }
+        ]
+    },
+    {
+        "name":"Antiparasitarios",
+        "target":"Antiparasitarios",
+        "submenu": [
+            {
+                "tipo":"Tipo 1",
+                "url":"#"
+            },
+            {
+                "tipo":"Tipo 2",
+                "url":"#"
+            },
+            {
+                "tipo":"Tipo 3",
+                "url":"#"
+            }
+        ]
+    }
+]

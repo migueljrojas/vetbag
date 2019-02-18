@@ -51,4 +51,13 @@
             line-height: 60px;
         }
     }
+
+    &__select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid $lightGray;
+        border-radius: 5px;
+        outline: none;
+        color: $darkGray;
+    }
 }
