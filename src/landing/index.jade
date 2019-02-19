@@ -110,17 +110,54 @@ block content
                                                 label.vb-form__label Universidad
                                         .col-24.col-sm-12
                                             .vb-form__group
-                                                input.vb-form__input.vb-form__input--radio(type="radio", id="vet", name="usertype")
-                                                label.vb-form__label.vb-form__label--radio(for="vet")
+                                                input.vb-form__input.vb-form__input--radio(type="radio", id="vetRadio", name="usertype")
+                                                label.vb-form__label.vb-form__label--radio(for="vetRadio")
                                                     | Soy  
                                                     span.vb-form__label-info Médico veterinario
 
                                         .col-24.col-sm-12
                                             .vb-form__group
-                                                input.vb-form__input.vb-form__input--radio(type="radio", id="estudent", name="usertype")
-                                                label.vb-form__label.vb-form__label--radio(for="estudent")
+                                                input.vb-form__input.vb-form__input--radio(type="radio", id="studentRadio", name="usertype")
+                                                label.vb-form__label.vb-form__label--radio(for="studentRadio")
                                                     | Soy  
                                                     span.vb-form__label-info estudiante de medicina veterinaria
+                                        
+                                        #vet.col-24
+                                            .row
+                                                .col-24.col-sm-12
+                                                    .vb-form__group
+                                                        select.vb-form__input.vb-form__input--select
+                                                            option(hidden, selected, disabled) Año de Egreso
+                                                            option 2018
+                                                            option 2017
+
+                                                        label.vb-form__label Año de Egreso
+                                                .col-24
+                                                    .vb-form__group
+                                                        input.vb-form__input.vb-form__input--file(type="file", id="vetFile")
+                                                        label.vb-form__label.vb-form__label--file(for="vetFile")
+                                                            span.txt Subir título MV o documento de acreditación
+                                                            span.btn Carga
+
+                                        #student.col-24
+                                            .row
+                                                .col-24.col-sm-12
+                                                    .vb-form__group
+                                                        select.vb-form__input.vb-form__input--select
+                                                            option(hidden, selected, disabled) Años cursados
+                                                            option 1
+                                                            option 2
+                                                            option 3
+                                                            option 4
+
+                                                        label.vb-form__label Años cursados
+                                                .col-24
+                                                    .vb-form__group
+                                                        input.vb-form__input.vb-form__input--file(type="file", id="studentFile")
+                                                        label.vb-form__label.vb-form__label--file(for="studentFile")
+                                                            span.txt Subir carnet estudiantil o documento de acreditación
+                                                            span.btn Carga
+                                        
                                         .col-24
                                             .vb-form__group.vb-form__group--center
                                                 input.vb-form__input.vb-form__input--checkbox(type="checkbox", id="terms")

@@ -1,0 +1,106 @@
+.vendedores {
+    background: $lightestGray;
+
+    &__hero{
+        padding: 40px 0;
+
+        @include mq(md) {
+            padding: 3% 0;
+        }
+
+        &__title {
+            color: $purple;
+        }
+
+        &__heading {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $lightGray;
+
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &__banner {
+            padding: 40px 15px;
+            background: linear-gradient(135deg, $purple 50%,$yellow 50%);
+            min-height: 300px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &__illustrations {
+                position: absolute;
+                top: 0;
+                right:5%;
+                bottom:0;
+                left: 5%;
+                overflow: hidden;      
+                display: flex;
+                justify-content: space-between;
+                display: none;
+
+                @include mq(sm) {
+                    display: block;
+                }
+
+                img {
+                    position: relative;
+                    top: 10%;
+                }
+            }
+        }
+
+        &__content {
+            text-align: center;
+            position: relative;
+
+            .button__link {
+                width: 300px;
+                font-size: 21px;
+            }
+        }
+
+        &__content-title {
+            color: $white;
+            font-size: 36px;
+        }
+    }
+
+    &__directorio {
+        padding: 0 0 40px 0;
+
+        @include mq(md) {
+            padding: 0 0 3% 0;
+        }
+
+        &__section {
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__index {
+            color: $orange;
+        }
+
+        &__item {
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            color: $darkGray;
+            font-size: 14px;
+            font-weight: 600;
+
+            @include mq(md) {
+                font-size: 18px;
+            }
+        }
+    }
+}

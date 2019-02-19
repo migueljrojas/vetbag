@@ -10,6 +10,7 @@ var Slider = require('../_modules/slider/slider');
 var DataSwitcher = require('../_modules/data-switcher/data-switcher');
 var DataToggle = require('../_modules/data-switcher/data-toggle');
 var Products = require('../_modules/product/product');
+var Landing = require('./landing');
 
 $(function() {
     require('../../bower_components/slick-carousel/slick/slick');
@@ -19,4 +20,5 @@ $(function() {
     new DataSwitcher();
     new DataToggle();
     new Products();
+    new Landing();
 });

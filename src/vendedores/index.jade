@@ -1,0 +1,72 @@
+extends ../_layouts/base
+
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.vendedores
+        section.vendedores__hero
+            .container
+                .row
+                    .col-24
+                        .vendedores__hero__heading
+                            h1.vendedores__hero__title Nuestros Vendedores
+                            +button('link', 'Acceso alpanel de vendedores', '#')
+
+                        .vendedores__hero__banner
+                            .vendedores__hero__banner__illustrations
+                                img._doc(src="/images/illustration-doctor.svg")
+                                img._est(src="/images/illustration-estudiante.svg")
+                            .vendedores__hero__content
+                                h2.vendedores__hero__content-title ¿Eres veterinario o estudiante?
+                                +button('link', 'Únete a VetBag', '/landing')
+        section.vendedores__directorio
+            .container
+                .row
+                    .col-24
+                        .vendedores__directorio__section
+                            h3.vendedores__directorio__index A
+                            .row
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item(href="#") Accesoriosdelagua
+                                    a.vendedores__directorio__item(href="#") Acuarios Condal
+                                    a.vendedores__directorio__item(href="#") Adego
+                                    a.vendedores__directorio__item(href="#") Agrumop
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item(href="#") Altudog
+                                    a.vendedores__directorio__item(href="#") Animal Distribución
+                                    a.vendedores__directorio__item(href="#") Animal Elite
+                                    a.vendedores__directorio__item(href="#") Animalstar
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item(href="#") Accesoriosdelagua
+                                    a.vendedores__directorio__item(href="#") Acuarios Condal
+                                    a.vendedores__directorio__item(href="#") Adego
+                                    a.vendedores__directorio__item(href="#") Agrumop
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item(href="#") Aosom
+                                    a.vendedores__directorio__item(href="#") Aquazen
+                                    a.vendedores__directorio__item(href="#") Arquipets
+                                    a.vendedores__directorio__item(href="#") Arquivet
+                        
+                        .vendedores__directorio__section
+                            h3.vendedores__directorio__index B
+                            .row
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item Banola Outdoors
+                                    a.vendedores__directorio__item Bian Products S.l
+                                    a.vendedores__directorio__item Bicharracos
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item Bichomania
+                                    a.vendedores__directorio__item Bio Mordiscos
+                                    a.vendedores__directorio__item Biocenter Distribución
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item Biozoo
+                                    a.vendedores__directorio__item Bokados
+                                    a.vendedores__directorio__item Bps
+                                .col-12.col-md-6
+                                    a.vendedores__directorio__item Banola Outdoors
+                                    a.vendedores__directorio__item Bian Products S.l
+                                    a.vendedores__directorio__item Bicharracos Bichoh!
