@@ -577,20 +577,50 @@
 
     &--landing {
         .button {
-            margin-left: 15px;
+            margin-left: 10px;
+
+            @include mq(sm) {
+                margin-left: 15px;
+            }
+
+            &__link {
+                @include mq(xs) {
+                    padding: 0 10px;
+                    font-size: 14px;
+                    min-width: 12px;
+                }
+            }
         }
 
         #{$h}__wrapper {
-            padding: 30px 0;
+            padding: 10px 0;
+
+            @include mq(sm) {
+                padding: 30px 0;
+            }
+        }
+
+        #{$h}__actions {
+            @include mq(xs) {
+                padding:0;
+            }
+        }
+
+        #{$h}__logo {
+            height: 25px;
+
+            @include mq(sm) {
+                height: 50px;
+            }
         }
 
         & + main {
             padding-top: 70px;
-    
+
             @include mq(sm) {
                 padding-top: 100px;
             }
-    
+
             @include mq(md) {
                 padding-top: 120px;
             }

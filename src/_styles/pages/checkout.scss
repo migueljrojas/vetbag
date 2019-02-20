@@ -153,6 +153,8 @@
             display: flex;
             align-items: center;
             flex-direction: row;
+            padding: 0 15px;
+            margin-bottom: 20px;
 
             @include mq(sm) {
                 margin-bottom: 20px;
@@ -204,13 +206,14 @@
         &__image {
             overflow: hidden;
             position: relative;
-            height: 20vh;
+            height: 0;
             width: 40%;
+            padding-bottom: 40%;
 
             img {
                 position: absolute;
-                height: 100%;
-                width: auto;
+                width: 100%;
+                height: auto;
                 left: 50%;
                 top: 50%;
                 transform: translate3d(-50%, -50%, 0);
@@ -226,10 +229,11 @@
             font-size: 18px;
             color: $darkGray;
             font-weight: 600;
-            padding-right: 30px;
+            padding-left: 15px;
 
             @include mq(sm) {
                 width: 60%;
+                padding-right: 15px;
 
             }
         }
