@@ -209,7 +209,7 @@
 
             @include mq(sm) {
                 padding: 20px;
-                font-size: 21px;
+                font-size: 19px;
             }
 
             &--right {
@@ -298,7 +298,7 @@
         @include mq(sm) {
             padding: 60px 0;
         }
-        
+
 
         &__title {
             color: $white;
