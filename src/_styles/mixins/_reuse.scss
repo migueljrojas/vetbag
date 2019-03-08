@@ -159,16 +159,22 @@
     }
 }
 
-@mixin sectionTitle {
+@mixin sectionTitle($color: $purple, $fontSizeSm: 32px, $fontSizeMd: 40px, $textAlign: center) {
     font-weight: 900;
-    color: $purple;
+    color: $color;
     margin-top: 0;
     margin-bottom: 20px;
-    text-align: center;
-    font-size: 32px;
+    text-align: $textAlign;
+    font-size: $fontSizeSm;
 
     @include mq(sm) {
-        font-size: 40px;
+        font-size: $fontSizeMd;
         text-align: left;
     }
+}
+
+@mixin divider {
+    border: 1px solid $lightGray;
+    width: 100%;
+    margin: 40px 0;
 }

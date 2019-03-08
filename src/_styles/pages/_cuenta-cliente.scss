@@ -1,0 +1,91 @@
+.cuenta-cliente {
+    background: $lightestGray;
+    padding-bottom: 40px;
+
+    &--mis-datos {
+        &__datos-cliente {
+            &__title {
+                @include sectionTitle;
+            }
+
+            &__subtitle {
+                color: $orange;
+                font-weight: 600;
+            }
+
+            &__text {
+                text-align: center;
+                color: $orange;
+                font-weight: 600;
+            }
+
+            &__divider {
+                @include divider;
+            }
+
+            &__detalle-mascotas {
+                background: $white;
+                height: 200px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $lightGray;
+            }
+        }
+
+        &__group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+
+            .vb-form {
+                &__group {
+                    width: 31%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &__group-title {
+            width: 100%;
+            margin-top: 10px;
+            color: $darkGray;
+
+            h4 {
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        &__input {
+            &--radio {
+                position: absolute;
+                left: -9999px;
+            }
+
+            &:checked {
+                & + label {
+                    background: $white;
+                    border: 1px solid $orange;
+                    color: $orange;
+                }
+            }
+        }
+
+        &__label {
+            @include trans;
+
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: $white;
+            border: 1px solid $lightGray;
+            border-radius: 50px;
+            font-size: 12px;
+        }
+    }
+}

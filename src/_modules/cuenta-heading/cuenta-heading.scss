@@ -1,0 +1,46 @@
+.cuenta-heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: 200px;
+
+    &__image {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        border: 1px solid $lightGray;
+        border-radius: 50%;
+
+        @include mq(md) {
+            height: 150px;
+            width: 150px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+        border: 1px solid $lightGray;
+        background: $white;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: 20px;
+        height: 70px;
+        
+        @include mq(md) {
+            margin-left: 5%;
+            height: 100px;
+        }
+
+        h2 {
+            @include sectionTitle($color: $orange, $fontSizeSm: 30px, $fontSizeMd: 46px);
+            margin-bottom: 0;
+            padding-left: 100px;
+        }
+    }
+}

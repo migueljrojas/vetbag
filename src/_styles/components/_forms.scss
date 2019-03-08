@@ -1,4 +1,4 @@
-.vb-form{
+.vb-form {
     $f: &;
 
     &__group {
@@ -24,8 +24,8 @@
         font-family: $mainFont;
         box-shadow: none;
         -webkit-appearance: none;
-       -moz-appearance:    none;
-       appearance:         none;
+        -moz-appearance:    none;
+        appearance:         none;
 
         @include mq(md) {
             height: 50px;

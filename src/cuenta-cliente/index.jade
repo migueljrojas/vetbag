@@ -1,0 +1,179 @@
+extends ../_layouts/base
+
+include ../_modules/cuenta-heading/cuenta-heading
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.cuenta-cliente.cuenta-cliente--mis-datos
+        +cuenta-heading
+        
+        section.cuenta-cliente--mis-datos__datos-cliente
+            form.cuenta-cliente--mis-datos__datos-cliente-form
+                .container
+                    .row
+                        .col-24
+                            h3.cuenta-cliente--mis-datos__datos-cliente__title Mis datos
+                        .col-24.col-md-16.offset-md-4
+                            .row
+                                .col-24
+                                    h4.cuenta-cliente--mis-datos__datos-cliente__subtitle Datos personales
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="text", placeholder="Nombre")
+                                        label.vb-form__label Nombre
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="text", placeholder="Apellido Paterno")
+                                        label.vb-form__label Apellido Paterno
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="text", placeholder="Apellido Materno (opcional)")
+                                        label.vb-form__label Apellido Materno (opcional)
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        select.vb-form__input
+                                            option(hidden selected disabled) Género
+                                            option Femenino
+                                            option Masculino
+                                        label.vb-form__label Género
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="date")
+                                        label.vb-form__label Fecha de nacimiento
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="number", placeholder="R.U.T")
+                                        label.vb-form__label R.U.T
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="number", placeholder="Celular")
+                                        label.vb-form__label Celular
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="number", placeholder="Email")
+                                        label.vb-form__label Email
+                                .col-24
+                                    p.vb-form__disclaimer * Campos Obligatorios
+                        .col-24
+                            .cuenta-cliente--mis-datos__datos-cliente__divider
+                    .row
+                        .col-24.col-md-16.offset-md-4
+                            .row
+                                .col-24
+                                    h4.cuenta-cliente--mis-datos__datos-cliente__subtitle Cambiar contraseña
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(placeholder="Contraseña")
+                                        label.vb-form__label Contraseña
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(placeholder="Repetir contraseña")
+                                        label.vb-form__label repetir contraseña
+                        .col-24
+                            .cuenta-cliente--mis-datos__datos-cliente__divider
+                    .row
+                        .col-24
+                            h3.cuenta-cliente--mis-datos__datos-cliente__title Mis direcciones
+                        .col-24.col-md-16.offset-md-4
+                            .row
+                                .col-24
+                                    h4.cuenta-cliente--mis-datos__datos-cliente__subtitle Dirección 1
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="text", placeholder="Calle")
+                                        label.vb-form__label Calle
+                                .col-24.col-md-6
+                                    .vb-form__group
+                                        input.vb-form__input(type="number", placeholder="Número")
+                                        label.vb-form__label Número
+                                .col-24.col-md-6
+                                    .vb-form__group
+                                        input.vb-form__input(placeholder="Piso y departamento")
+                                        label.vb-form__label Piso y departamento
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        select.vb-form__input
+                                            option(hidden selected disabled) Región
+                                            option Antofagasta
+                                            option Santiago
+                                        label.vb-form__label Región
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        select.vb-form__input
+                                            option(hidden selected disabled) Comuna
+                                            option Comuna 1
+                                            option Comuna 2
+                                        label.vb-form__label Comuna
+                                .col-24.col-md-8.offset-md-8
+                                    .vb-form__group.vb-form__group--center                                    
+                                        +button('submit', 'Agregar nueva dirección', '#', '', '', 'ghost')
+                        .col-24
+                            .cuenta-cliente--mis-datos__datos-cliente__divider
+                    .row
+                        .col-24
+                            h3.cuenta-cliente--mis-datos__datos-cliente__title Agregar mascota
+                        .col-24.col-md-16.offset-md-4
+                            .row
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        input.vb-form__input(type="text", placeholder="Me llamo")
+                                        label.vb-form__label Me llamo
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        select.vb-form__input
+                                            option(hidden selected disabled) Soy un
+                                            option Labrador
+                                            option Bulldog
+                                        label.vb-form__label Soy un
+                                .col-24.col-md-12
+                                    .cuenta-cliente--mis-datos__group
+                                        .cuenta-cliente--mis-datos__group-title
+                                            h4 Mi tamaño es
+                                        .vb-form__group
+                                            input.cuenta-cliente--mis-datos__input.cuenta-cliente--mis-datos__input--radio(type="radio" id="pequeño" name="tamaño")
+                                            label.cuenta-cliente--mis-datos__label(for="pequeño") Pequeño   
+                                        .vb-form__group
+                                            input.cuenta-cliente--mis-datos__input.cuenta-cliente--mis-datos__input--radio(type="radio" id="mediano" name="tamaño")
+                                            label.cuenta-cliente--mis-datos__label(for="mediano") Mediano
+                                        .vb-form__group
+                                            input.cuenta-cliente--mis-datos__input.cuenta-cliente--mis-datos__input--radio(type="radio" id="grande" name="tamaño")
+                                            label.cuenta-cliente--mis-datos__label(for="grande") Grande
+                                .col-24.col-md-12
+                                    .cuenta-cliente--mis-datos__group
+                                        .cuenta-cliente--mis-datos__group-title
+                                            h4 tengo entre
+                                        .vb-form__group
+                                            input.cuenta-cliente--mis-datos__input.cuenta-cliente--mis-datos__input--radio(type="radio" id="joven" name="edad")
+                                            label.cuenta-cliente--mis-datos__label(for="joven") 1 a 12 meses
+                                        .vb-form__group
+                                            input.cuenta-cliente--mis-datos__input.cuenta-cliente--mis-datos__input--radio(type="radio" id="adulto" name="edad")
+                                            label.cuenta-cliente--mis-datos__label(for="adulto") 1 a 7 años
+                                        .vb-form__group
+                                            input.cuenta-cliente--mis-datos__input.cuenta-cliente--mis-datos__input--radio(type="radio" id="viejo" name="edad")
+                                            label.cuenta-cliente--mis-datos__label(for="viejo") mas de 7 años
+                                .col-24.col-md-12
+                                    .vb-form__group
+                                        select.vb-form__input
+                                            option(hidden selected disabled) Raza
+                                            option Perro
+                                            option Gato
+                                        label.vb-form__label Raza
+                                .col-24.col-md-8.offset-md-8
+                                    .vb-form__group.vb-form__group--center
+                                        +button('submit', 'Registrar Mascota', '#', '', '', 'ghost')
+                                .col-24
+                                    h3.cuenta-cliente--mis-datos__datos-cliente__subtitle Mis Mascotas
+                                .col-24
+                                    .cuenta-cliente--mis-datos__datos-cliente__detalle-mascotas
+                                        h3.cuenta-cliente--mis-datos__datos-cliente__text Todavía no registraste ninguna mascota
+                        .col-24
+                            .cuenta-cliente--mis-datos__datos-cliente__divider
+                    .row
+                        .col-24.col-md-8.offset-md-8
+                            .vb-form__group.vb-form__group--center
+                                +button('submit', 'Guardar', '#', '', '', '')
+                            
