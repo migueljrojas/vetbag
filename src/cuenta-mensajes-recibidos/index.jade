@@ -1,0 +1,255 @@
+extends ../_layouts/base
+
+include ../_modules/cuenta-heading/cuenta-heading
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.cuenta-cliente.cuenta-cliente--mensajes-recibidos
+        +cuenta-heading
+        
+        section.cuenta-cliente--mensajes-recibidos__bandeja
+            .container
+                .row
+                    .col-24.col-md-6
+                        .row
+                            .col-24
+                                .cuenta-cliente--mensajes-recibidos__button
+                                    +button('link', 'Nuevo mensaje', '#')
+                                h4.cuenta-cliente--mensajes-recibidos__subtitle Mis Mensajes
+                                ul.cuenta-cliente--mensajes-recibidos__list
+                                    li.cuenta-cliente--mensajes-recibidos__item(data-target="bandeja") Bandeja de entrada
+                                    li.cuenta-cliente--mensajes-recibidos__item(data-target="enviados") Enviados
+                                    li.cuenta-cliente--mensajes-recibidos__item(data-target="recibidos") Recibidos
+                    .col-24.col-md-18
+                        .row
+                            .col-24
+                                .cuenta-cliente--mensajes-recibidos__global-wrapper(data-content='bandeja')
+                                    .cuenta-cliente--mensajes-recibidos__container
+                                        h3.cuenta-cliente--pedido-entregado__title Bandeja de entrada
+                                        select.vb-form__input.cuenta-cliente--pedido-entregado__input
+                                            option(selected hidden disabled) Ordenar por
+                                            option Precio
+                                            option Fecha
+                                            option Vendedor
+                                    .cuenta-cliente--mensajes-recibidos__wrapper
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                            
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+
+                                .cuenta-cliente--mensajes-recibidos__global-wrapper(data-content='enviados')
+                                    .cuenta-cliente--mensajes-recibidos__container
+                                        h3.cuenta-cliente--pedido-entregado__title Enviados
+                                    .cuenta-cliente--mensajes-recibidos__wrapper
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                            
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+
+                                .cuenta-cliente--mensajes-recibidos__global-wrapper(data-content='recibidos')
+                                    .cuenta-cliente--mensajes-recibidos__container
+                                        h3.cuenta-cliente--pedido-entregado__title Recibidos
+                                    .cuenta-cliente--mensajes-recibidos__wrapper
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                            
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__divider
+                                        
+                                        .cuenta-cliente--mensajes-recibidos__mensaje
+                                            p.cuenta-cliente--mensajes-recibidos__name Alejandro Gómez
+                                            p.cuenta-cliente--mensajes-recibidos__mensaje-title Consulta Alimento balanceado
+                                            span.cuenta-cliente--mensajes-recibidos__date 12/12/2018 18:52
+                                            i.fa.fa-trash

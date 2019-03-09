@@ -1,0 +1,125 @@
+extends ../_layouts/base
+
+include ../_modules/cuenta-heading/cuenta-heading
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.cuenta-cliente.cuenta-cliente--mis-ordenes
+        +cuenta-heading
+
+        section.cuenta-cliente--mis-ordenes__ordenes
+            .container
+                .row
+                    .col-24
+                        .cuenta-cliente--mis-ordenes__container
+                            h3.cuenta-cliente--mis-ordenes__datos-cliente__title Mis Ordenes
+                            select.vb-form__input.cuenta-cliente--mis-ordenes__input
+                                option(selected hidden disabled) Ordenar por
+                                option Precio
+                                option Fecha
+                                option Vendedor
+                        .cuenta-cliente--mis-ordenes__divider
+                .row
+                    .col-24
+                        .cuenta-cliente--mis-ordenes__orden-wrapper
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--left
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    h4.cuenta-cliente--mis-ordenes__group-text Fecha
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    h4.cuenta-cliente--mis-ordenes__group-text Pedido #
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--center
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-left
+                                    h4.cuenta-cliente--mis-ordenes__group-text Vendedor
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-right
+                                    h4.cuenta-cliente--mis-ordenes__group-text Monto
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--right
+                                h4.cuenta-cliente--mis-ordenes__group-text Estado
+                .row
+                    .col-24
+                        .cuenta-cliente--mis-ordenes__orden-wrapper.cuenta-cliente--mis-ordenes__orden-wrapper--white
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--left
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Fecha
+                                    p.cuenta-cliente--mis-ordenes__orden-text 11/01/2019
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Pedido
+                                    p.cuenta-cliente--mis-ordenes__orden-text 0004
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--center
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-left
+                                    label.cuenta-cliente--mis-ordenes__group-label Venderor
+                                    p.cuenta-cliente--mis-ordenes__orden-text Alejandro Gonzalez
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-right
+                                    label.cuenta-cliente--mis-ordenes__group-label Monto
+                                    p.cuenta-cliente--mis-ordenes__price $4.129,39
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--right
+                                .cuenta-cliente--mis-ordenes__button-block
+                                    a.cuenta-cliente--mis-ordenes__button.cuenta-cliente--mis-ordenes__button--cancelado(href="#") Cancelado
+                                    a.cuenta-cliente--mis-ordenes__plus-button(href="#")
+                                        i.fa.fa-plus
+                    .col-24
+                        .cuenta-cliente--mis-ordenes__orden-wrapper.cuenta-cliente--mis-ordenes__orden-wrapper--white
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--left
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Fecha
+                                    p.cuenta-cliente--mis-ordenes__orden-text 10/01/2019
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Pedido
+                                    p.cuenta-cliente--mis-ordenes__orden-text 0003
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--center
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-left
+                                    label.cuenta-cliente--mis-ordenes__group-label Venderor
+                                    p.cuenta-cliente--mis-ordenes__orden-text Pablo Franco
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-right
+                                    label.cuenta-cliente--mis-ordenes__group-label Monto
+                                    p.cuenta-cliente--mis-ordenes__price $2.334,80
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--right
+                                .cuenta-cliente--mis-ordenes__button-block
+                                    a.cuenta-cliente--mis-ordenes__button.cuenta-cliente--mis-ordenes__button--pendiente(href="#") Pendiente
+                                    a.cuenta-cliente--mis-ordenes__plus-button(href="#")
+                                        i.fa.fa-plus
+                    .col-24
+                        .cuenta-cliente--mis-ordenes__orden-wrapper.cuenta-cliente--mis-ordenes__orden-wrapper--white
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--left
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Fecha
+                                    p.cuenta-cliente--mis-ordenes__orden-text 11/01/2019
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Pedido
+                                    p.cuenta-cliente--mis-ordenes__orden-text 0002
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--center
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-left
+                                    label.cuenta-cliente--mis-ordenes__group-label Venderor
+                                    p.cuenta-cliente--mis-ordenes__orden-text Ana Gutierrez
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-right
+                                    label.cuenta-cliente--mis-ordenes__group-label Monto
+                                    p.cuenta-cliente--mis-ordenes__price $5.160,00
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--right
+                                .cuenta-cliente--mis-ordenes__button-block
+                                    a.cuenta-cliente--mis-ordenes__button.cuenta-cliente--mis-ordenes__button--despachado(href="#") Despachado
+                                    a.cuenta-cliente--mis-ordenes__plus-button(href="#")
+                                        i.fa.fa-plus
+                    .col-24
+                        .cuenta-cliente--mis-ordenes__orden-wrapper.cuenta-cliente--mis-ordenes__orden-wrapper--white
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--left
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Fecha
+                                    p.cuenta-cliente--mis-ordenes__orden-text 11/01/2019
+                                .cuenta-cliente--mis-ordenes__orden-container
+                                    label.cuenta-cliente--mis-ordenes__group-label Pedido
+                                    p.cuenta-cliente--mis-ordenes__orden-text 0001
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--center
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-left
+                                    label.cuenta-cliente--mis-ordenes__group-label Venderor
+                                    p.cuenta-cliente--mis-ordenes__orden-text Silvia Rola
+                                .cuenta-cliente--mis-ordenes__orden-container.cuenta-cliente--mis-ordenes__orden-container--center-right
+                                    label.cuenta-cliente--mis-ordenes__group-label Monto
+                                    p.cuenta-cliente--mis-ordenes__price $5.347,30
+                            .cuenta-cliente--mis-ordenes__orden-group.cuenta-cliente--mis-ordenes__orden-group--right
+                                .cuenta-cliente--mis-ordenes__button-block
+                                    a.cuenta-cliente--mis-ordenes__button.cuenta-cliente--mis-ordenes__button--despachado(href="#") Despachado
+                                    a.cuenta-cliente--mis-ordenes__plus-button(href="#")
+                                        i.fa.fa-plus

@@ -2,7 +2,10 @@
     background: $lightestGray;
     padding-bottom: 40px;
 
-    &--mis-datos {
+    &--mis-datos,
+    &--mis-ordenes,
+    &--pedido-en-proceso,
+    &--pedido-entregado {
         &__datos-cliente {
             &__title {
                 @include sectionTitle;
@@ -17,10 +20,11 @@
                 text-align: center;
                 color: $orange;
                 font-weight: 600;
-            }
+                margin: 0;
 
-            &__divider {
-                @include divider;
+                @include mq(md) {
+                    text-align: left;
+                }
             }
 
             &__detalle-mascotas {
@@ -32,6 +36,10 @@
                 align-items: center;
                 border: 1px solid $lightGray;
             }
+        }
+
+        &__divider {
+            @include divider;
         }
 
         &__group {
@@ -86,6 +94,536 @@
             border: 1px solid $lightGray;
             border-radius: 50px;
             font-size: 12px;
+        }
+    }
+
+    &--mis-ordenes {
+        &__container {
+
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+
+        &__input {
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                width: 30%;
+                margin-bottom: 0
+            }
+        }
+
+        &__orden-wrapper {
+            position: relative;
+
+            @include mq(md) {
+                display: flex;
+                width: 100%;
+            }
+
+            &--white {
+                background: $white;
+                border: 1px solid $lightGray;
+                margin-bottom: 20px;
+                padding: 20px 0;
+
+                @include mq(md) {
+                    padding: 0;
+                }
+            }
+        }
+
+        &__orden-group {
+            display: flex;
+            align-items: center;
+
+            &--left {
+                width: 100%;
+
+                @include mq(md) {
+                    width: 30%;
+                }
+            }
+
+            &--center {
+                width: 100%;
+
+                @include mq(md) {
+                    width: 50%;
+                }
+            }
+
+            &--right {
+                width: 100%;
+
+                @include mq(md) {
+                    width: 20%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &__orden-container {
+            width: 50%;
+
+            &--center-left {
+                @include mq(md) {
+                    width: 70%;
+                }
+            }
+
+            &--center-right {
+                @include mq(md) {
+                    width: 30%;
+                }
+            }
+            &--right {
+                width: 100%;
+            }
+        }
+
+        &__group-text {
+            display: none;
+
+            @include mq(md) {
+                display: flex;
+                color: $orange;
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: 0;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+
+        &__orden-text {
+            color: $darkGray;
+            padding-left: 10px;
+        }
+
+        &__price {
+            font-size: 20px;
+            padding-left: 10px;
+            color: $blue;
+            font-weight: 300;
+            font-weight: 600;
+        }
+
+        &__group-label {
+            padding-left: 10px;
+            color: $orange;
+            font-weight: 600;
+            font-size: 18px;
+
+            @include mq(md) {
+                display: none;
+            }
+        }
+
+        &__button-block {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            @include mq(md) {
+                padding-right: 25px;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 10px;
+
+            }
+        }
+
+        &__button {
+            background: transparent;
+            border: 1px solid $midGray;
+            text-align: center;
+            color:  $midGray;
+            width: 150px;
+            padding: 5px 0;
+            border-radius: 50px;
+            outline: none;
+            text-decoration: none;
+            font-size: 14px;
+            pointer-events: none;
+
+            @include mq(md) {
+                margin-bottom: 0;
+            }
+
+            &--pendiente {
+                pointer-events: all;
+                color: $orange;
+                border: 1px solid $orange;
+            }
+
+            &--despachado {
+                pointer-events: all;
+                color: $white;
+                border: 1px solid $orange;
+                background: $orange;
+            }
+        }
+
+        &__plus-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-decoration: none;
+
+            @include mq(md) {
+                display: flex;
+            }
+
+            i {
+                color: $orange;
+            }
+        }
+
+        &__divider {
+            @include divider($marginTop: 0);
+        }
+    }
+
+    &--pedido-en-proceso,
+    &--pedido-entregado {
+        &__container {
+            position: relative;
+
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 60px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__title {
+            @include sectionTitle($fontSizeSm: 24px);
+
+            @include mq(md) {
+                margin-bottom: 0
+            }
+        }
+
+        &__subtitle {
+            color: $orange;
+            font-size: 22px;
+            font-weight: 600;
+
+        }
+
+        &__back-button {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            display: flex;
+
+            p {
+                margin: 0;
+                font-weight: 600;
+            }
+
+            i {
+                margin-right: 20px;
+            }
+        }
+
+        &__input {
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                width: 30%;
+                margin-bottom: 0
+            }
+        }
+
+        &__group {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid $lightGray;
+
+            &:last-child {
+                border-bottom: 1px solid $lightGray;
+            }
+        }
+
+        &__text {
+            color: $darkGray;
+
+            &--orange {
+                color: $orange;
+            }
+
+            &--status {
+                color: $orange;
+                font-size: 22px;
+                margin: 0;
+
+                &--top {
+                    margin-bottom: 10px;
+
+                    @include mq(md) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__status {
+            width: 100%;
+            background: $white;
+            border: 2px solid $orange;
+            border-radius: 5px;
+            text-align: center;
+            padding: 30px 0;
+            margin: 40px 0 80px 0;
+
+            @include mq(sm) {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        &__button {
+            margin: 40px 0;
+            .button {
+                a {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__divider {
+            @include divider($marginTop: 0);
+        }
+    }
+
+    &--mensajes-recibidos,
+    &--mensaje,
+    &--mensaje-respuesta {
+        &__global-wrapper {
+            display: none;
+
+            &.-active {
+                display: block;
+            }
+        }
+
+        &__container {
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__button {
+            .button {
+                a {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__title {
+            color: $orange;
+            font-weight: 900;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        &__group {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__sender {
+            color: $darkGray;
+            font-size: 20px;
+        }
+
+        &__date {
+            color: $orange;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        &__text {
+            color: $darkGray;
+            margin-top: 0;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid $lightGray;
+        }
+
+        &__subtitle {
+            color: $orange;
+            font-weight: 900;
+            font-size: 20px;
+            border-bottom: 1px solid $lightGray;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        &__list {
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item {
+            @include trans;
+
+            position: relative;
+            color: $darkGray;
+            padding-left: 20px;
+
+            &.-active {
+                color: $orange;
+                font-weight: 600;
+
+                &:before {
+                    transform: translateY(-50%) scale3d(1.2,1.2,1.2);
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &:before {
+                @include trans;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 0;
+                width: 0;
+                border-left: 5px solid $orange;
+                border-right: 5px solid transparent;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+            }
+        }
+
+        &__wrapper {
+            background: $white;
+            border: 1px solid $lightGray;
+            padding: 40px 20px;
+        }
+
+        &__mensaje {
+            position: relative;
+
+            @include mq(md) {
+                display: flex;
+                align-items: center;
+            }
+
+            i {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $orange;
+            }
+        }
+
+        &__name {
+            color: $blue;
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0;
+            width: 100%;
+            margin-bottom: 10px;
+
+            @include mq(md) {
+                width: 30%;
+                margin-bottom: 0;
+            }
+        }
+
+        &__mensaje-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            width: 100%;
+
+            @include mq(md) {
+                width: 50%;
+                margin: 0;
+            }
+        }
+
+        &__date {
+            width: 100%;
+
+            @include mq(md) {
+                width: 20%;
+            }
+        }
+
+        &__textarea {
+            width: 100%;
+            height: 200px;
+            border: 1px solid $lightGray;
+        }
+
+        &__icon-group {
+            display: flex;
+            margin: 0 20px 40px 20px;
+
+            i {
+                margin-right: 20px;
+                color: $darkGray;
+            }
+        }
+
+        &__button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            @include mq(sm) {
+                justify-content: flex-start;
+            }
+
+            .button {
+                margin-bottom: 20px;
+
+                @include mq(sm) {
+                    margin-right: 20px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__divider {
+            @include divider($marginTop: 20px, $marginBottom: 20px);
         }
     }
 }

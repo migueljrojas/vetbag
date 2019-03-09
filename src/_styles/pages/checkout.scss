@@ -114,7 +114,11 @@
         }
 
         &__container {
-            display: flex;
+            display: none;
+
+            @include mq(md) {
+                display: flex;
+            }
         }
 
         &__container-group {
@@ -253,6 +257,10 @@
             border: 2px solid $lightGray;
             padding: 10px;
             border-radius: 5px;
+
+            &[disabled] {
+                border: none;
+            }
         }
 
         &__price {

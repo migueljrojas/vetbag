@@ -1,0 +1,154 @@
+extends ../_layouts/base
+
+include ../_modules/cuenta-heading/cuenta-heading
+include ../_modules/button/button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.cuenta-cliente.cuenta-cliente--pedido-entregado
+        +cuenta-heading
+
+        section.cuenta-cliente--pedido-entregado__datos
+            .container
+                .row
+                    .col-24
+                        .cuenta-cliente--pedido-entregado__container
+                            a.cuenta-cliente--pedido-entregado__back-button(herf="#")
+                                i.fa.fa-arrow-left
+                                p Volver a mis ordenes
+                            h3.cuenta-cliente--pedido-entregado__title Pedido #0001
+                            select.vb-form__input.cuenta-cliente--pedido-entregado__input
+                                option(selected hidden disabled) Ordenar por
+                                option Precio
+                                option Fecha
+                                option Vendedor
+                        .cuenta-cliente--pedido-entregado__divider
+                .row
+                    .col-24.col-md-12
+                        .cuenta-cliente--pedido-entregado__group
+                            h4.cuenta-cliente--pedido-entregado__subtitle Datos del comprador
+                            .cuenta-cliente--pedido-entregado__wrapper
+                                p.cuenta-cliente--pedido-entregado__text  Fecha de compra
+                                p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--orange 20/12/2018
+                            .cuenta-cliente--pedido-entregado__wrapper
+                                p.cuenta-cliente--pedido-entregado__text Cliente
+                                p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--orange Silvia Rola
+                    .col-24.col-md-12
+                        .cuenta-cliente--pedido-entregado__group
+                            h4.cuenta-cliente--pedido-entregado__subtitle Dirección de envío
+                            .cuenta-cliente--pedido-entregado__wrapper
+                                p.cuenta-cliente--pedido-entregado__text Receptor
+                                p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--orange Silvia Rola
+                            .cuenta-cliente--pedido-entregado__wrapper
+                                p.cuenta-cliente--pedido-entregado__text Calle
+                                p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--orange Silvia Pasaje Anakena 3422
+                            .cuenta-cliente--pedido-entregado__wrapper
+                                p.cuenta-cliente--pedido-entregado__text Localidad
+                                p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--orange 7510115 Providencia
+                            .cuenta-cliente--pedido-entregado__wrapper
+                                p.cuenta-cliente--pedido-entregado__text País
+                                p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--orange Chile
+                    .col-24
+                        .cuenta-cliente--pedido-entregado__status
+                            p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--status.cuenta-cliente--pedido-entregado__text--status--top
+                                |Estado: 
+                                span Entregado
+                            p.cuenta-cliente--pedido-entregado__text.cuenta-cliente--pedido-entregado__text--status 
+                                |Fecha de entrega: 
+                                span 24/12/2018
+
+        section.cuenta-cliente--pedido-entregado__detalle-orden
+            .container
+                .row
+                    .col-24
+                        .row
+                            .col-24.col-sm-18
+                                h3.cuenta-cliente--pedido-entregado__title Productos en la orden
+                                .cuenta-cliente--pedido-entregado__divider
+                            .col-24.col-sm-18
+                                .checkout__carrito__container
+                                    .checkout__carrito__container-group
+                                        .checkout__carrito__group-wrapper
+                                            h3.checkout__carrito__subtitle Producto
+                                    .checkout__carrito__container-group
+                                        .checkout__carrito__group-wrapper
+                                            h3.checkout__carrito__subtitle Cantidad
+                                        .checkout__carrito__group-wrapper
+                                            h3.checkout__carrito__subtitle Precio
+                .row
+                    .col-24.col-sm-18
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                        .checkout__carrito__product
+                            .checkout__carrito__group
+                                .checkout__carrito__image
+                                    img(src="/images/pack-pedigree.png")
+                                p.checkout__carrito__product-description Pedigree Adulto Carne Pollo Y Cereales
+                            .checkout__carrito__group
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Cantidad
+                                    input.checkout__carrito__input(type="number" placeholder="1")
+                                .checkout__carrito__group-wrapper.checkout__carrito__group-wrapper--align
+                                    a.checkout__carrito__link
+                                        i.fa.fa-trash
+                                .checkout__carrito__group-wrapper
+                                    p.checkout__carrito__label Precio
+                                    span.checkout__carrito__price $1.129
+                    .col-24.col-sm-6
+                        .checkout__carrito__payment-container
+                            .checkout__carrito__payment-wrapper
+                                p.checkout__carrito__payment-text Envío
+                                span.checkout__carrito__payment-number $80
+                        .checkout__carrito__payment-container.checkout__carrito__payment-container--orange
+                            p.checkout__carrito__payment-text.checkout__carrito__payment-text--white Total
+                            span.checkout__carrito__payment-number.checkout__carrito__payment-number--white $4.516
+                .row
+                    .col-24.col-md-6.offset-md-9
+                        .cuenta-cliente--pedido-entregado__button
+                            +button('link', 'Repetir pedido', '#')
